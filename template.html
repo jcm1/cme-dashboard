@@ -62,6 +62,26 @@ footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px
 <div class="chips" id="chips4"></div>
 <div class="note">Margin savings = management disclosure ($/day netting benefit). Performance bonds = client collateral on B/S ("customer deposits"). OI-by-class series starts with the next monthly release.</div></div>
 
+<div class="panel"><div class="ph"><div class="t">P8 · Open interest by asset class</div><div class="c">PERIOD-END · MOAT DEPTH</div></div>
+<div class="chartbox"><canvas id="c8"></canvas></div>
+<div class="chips" id="chips8"></div>
+<div class="note">OI = commitment, not activity — the depth behind tripwire #5. Populates from monthly volume releases (add-month --oi) plus quarter-end backfill.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P9 · Fee revenue mix by asset class</div><div class="c">QUARTERLY · SHARE = ADV × RPC (D)</div></div>
+<div class="chartbox"><canvas id="c9"></canvas></div>
+<div class="chips" id="chips9"></div>
+<div class="note">Derived contribution to clearing &amp; transaction fees: each class's ADV × RPC as a share of the total (D). Hover shows ≈$M where reported fee revenue is available. This is P1+P2 converted into money.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P10 · Non-transaction revenue</div><div class="c">MARKET DATA &amp; INFO SERVICES · QUARTERLY</div></div>
+<div class="chartbox"><canvas id="c10"></canvas></div>
+<div class="chips" id="chips10"></div>
+<div class="note">The recurring floor under volume cyclicality — market data revenue holds when ADV doesn't. Bars $M (R), line = share of total revenue.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P11 · Rates ADV vs UST issuance</div><div class="c">TRIPWIRE #3 · QUARTERLY</div></div>
+<div class="chartbox"><canvas id="c11"></canvas></div>
+<div class="chips" id="chips11"></div>
+<div class="note">Coupon (notes/bonds/TIPS/FRN) gross issuance — the duration that needs hedging. Divergence (issuance up, rates ADV down) means hedging is migrating elsewhere: tripwire #3 trips at 4 quarters.</div></div>
+
 <div class="panel"><div class="ph"><div class="t">P5 · Capital returns</div><div class="c">ANNUAL 2016–24 + ROLLING T12M 2025→ · PAID BASIS</div></div>
 <div class="chartbox"><canvas id="c5"></canvas></div>
 <div class="chips" id="chips5"></div>
@@ -71,6 +91,11 @@ footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px
 <div class="chartbox"><canvas id="c6"></canvas></div>
 <div class="chips" id="chips6"></div>
 <div class="note">Trailing-twelve-month, paid basis, so the annual variable doesn't sawtooth the line. Prices are quarter-end closes (R, Yahoo) through the latest quarter; the banner price refreshes daily via GitHub Action and live when the page can reach a quote.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P12 · Valuation — TTM adjusted P/E</div><div class="c">QUARTER-END · BANDS = HISTORY P20 / MEDIAN / P80</div></div>
+<div class="chartbox"><canvas id="c12"></canvas></div>
+<div class="chips" id="chips12"></div>
+<div class="note">Quarter-end close ÷ trailing-4-quarter adjusted EPS (D from R inputs). Bands are this series' own history — where in its range the market is paying for the machine.</div></div>
 
 <div class="panel wide"><div class="ph"><div class="t">P7 · Tripwire strip — the §8 signposts, live</div><div class="c">CLICK A CHIP</div></div>
 <div class="chips" id="twchips"></div>
@@ -87,6 +112,9 @@ const $=id=>document.getElementById(id);
 const NAVY="#1F4E79",NAVY2="#3E689A",ICE="#B9C9DA",AMBER="#C9930A",GREEN="#2F7A4D",RED="#A63A3A",GRAY="#8AA2B8";
 const mono={font:{family:"monospace",size:10}};
 Chart.defaults.font.family="monospace";Chart.defaults.font.size=10;
+const COLS={rates:NAVY,equity:NAVY2,energy:AMBER,ags:GREEN,metals:"#8F6A07",fx:GRAY};
+const LINES6=["rates","equity","energy","ags","metals","fx"];
+const empty=(id,msg)=>{const c=$(id);const d=document.createElement("div");d.style.cssText="display:flex;height:100%;align-items:center;justify-content:center;text-align:center;padding:0 20px;font-family:var(--mono);font-size:11px;color:#8AA2B8;font-style:italic";d.textContent=msg;c.replaceWith(d);};
 
 const M=DATA.meta;
 $("h_thru").textContent=M.through.monthly+" / "+M.through.quarterly;
@@ -156,8 +184,8 @@ const lastQ=qkeys[qkeys.length-1]||"2026Q2";
 const totals=qkeys.map(k=>[k,tot(k)]).filter(x=>x[1]!=null);
 const rec=totals.length?totals.reduce((a,b)=>b[1]>a[1]?b:a):null;
 const shr=bl[lastQ]?.adv?.rates&&tot(lastQ)?(bl[lastQ].adv.rates/tot(lastQ)*100).toFixed(0):null;
-$("chips1").innerHTML=`<span class="chip">${lastQ} <b>${tot(lastQ)??"—"}M</b>/day R</span>`+
- (rec?`<span class="chip">record ${rec[0]} <b>${rec[1]}M</b> R</span>`:"")+
+$("chips1").innerHTML=`<span class="chip">${lastQ} <b>${tot(lastQ)?.toFixed(1)??"—"}M</b>/day R</span>`+
+ (rec?`<span class="chip">record ${rec[0]} <b>${rec[1].toFixed(1)}M</b> R</span>`:"")+
  (shr?`<span class="chip">rates share <b>${shr}%</b> D</span>`:"")+
  `<span class="chip">colors = asset class · matches P2</span>`;})();
 
@@ -254,6 +282,73 @@ options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:tru
 const lastY=yieldPts[yieldPts.length-1];
 $("chips6").innerHTML=`<span class="chip">yield now <b>${lastY.toFixed(1)}%</b> D</span><span class="chip">vs <b>5.0%</b> on FY25-basis (comps tab) — the gap IS the 2026 buyback surge showing up in trailing numbers</span><span class="chip">price −21% from Mar high while yield spiked</span><span class="chip">px = quarter-end closes <b>R</b> + live banner</span>`;
 window.__lastYield=lastY;})();
+
+/* P8 open interest by asset class */
+(()=>{const s=DATA.moat?.oi_by_class?.series||[];
+if(!s.length){empty("c8","populates from monthly volume releases + quarter-end backfill — first point lands with the Aug-26 release");$("chips8").innerHTML=`<span class="chip">tripwire #5 gets its denominator here</span>`;return;}
+const labels=s.map(x=>x.p);
+const have=LINES6.filter(l=>s.some(x=>x[l]!=null));
+new Chart($("c8"),{type:"bar",data:{labels,datasets:have.map(l=>({label:l,data:s.map(x=>x[l]??null),backgroundColor:COLS[l],stack:"oi"}))},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:9,font:{size:9}}},tooltip:{callbacks:{footer:it=>"total "+it.reduce((a,i)=>a+(i.raw||0),0).toFixed(1)+"M"}}},scales:{x:{stacked:true,ticks:{maxTicksLimit:14}},y:{stacked:true,title:{display:true,text:"M contracts"}}}}});
+const last=s[s.length-1];const t=last.total??have.reduce((a,l)=>a+(last[l]||0),0);
+$("chips8").innerHTML=`<span class="chip">${last.p} total OI <b>${t.toFixed(1)}M</b> R</span>`+(last.rates!=null?`<span class="chip">rates <b>${last.rates.toFixed(1)}M</b> R</span>`:"")+`<span class="chip">tripwire #5 denominator</span>`;})();
+
+/* P9 fee revenue mix by asset class (D = adv×rpc share) */
+(()=>{const bl=DATA.byline;
+const qs=Object.keys(bl).filter(k=>/^\d{4}Q\d$/.test(k)&&LINES6.every(l=>bl[k]?.adv?.[l]!=null&&bl[k]?.rpc?.[l]!=null)).sort();
+if(qs.length<3){empty("c9","unlocks with the by-line ADV × RPC backfill (in progress)");return;}
+const fees=Object.fromEntries((DATA.rev_breakdown||[]).map(x=>[x.p,x.fees]));
+const shares=qs.map(k=>{const b=bl[k];const w=LINES6.map(l=>b.adv[l]*b.rpc[l]);const s=w.reduce((a,x)=>a+x,0);return w.map(x=>x/s*100);});
+new Chart($("c9"),{type:"bar",data:{labels:qs,datasets:LINES6.map((l,i)=>({label:l,data:shares.map(r=>+r[i].toFixed(1)),backgroundColor:COLS[l],stack:"mix"}))},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{boxWidth:9,font:{size:9}}},tooltip:{callbacks:{label:ctx=>{const f=fees[ctx.label];return ctx.dataset.label+" "+ctx.raw+"%"+(f?" ≈ $"+(f*ctx.raw/100).toFixed(0)+"M":"");}}}},scales:{x:{stacked:true,ticks:{maxTicksLimit:14}},y:{stacked:true,max:100,title:{display:true,text:"% of fee revenue (D)"}}}}});
+const lastK=qs[qs.length-1],lb=bl[lastK];const w=LINES6.map(l=>lb.adv[l]*lb.rpc[l]);const sw=w.reduce((a,x)=>a+x,0);
+$("chips9").innerHTML=`<span class="chip">${lastK} rates <b>${(w[0]/sw*100).toFixed(0)}%</b> of fees D</span><span class="chip">equity <b>${(w[1]/sw*100).toFixed(0)}%</b> D</span><span class="chip">energy+ags+metals+fx <b>${((w[2]+w[3]+w[4]+w[5])/sw*100).toFixed(0)}%</b> D</span>`;})();
+
+/* P10 non-transaction revenue */
+(()=>{const rb=(DATA.rev_breakdown||[]).slice().sort((a,b)=>a.p<b.p?-1:1);
+if(rb.length<2){empty("c10","unlocks with the revenue-breakdown backfill (in progress)");return;}
+const tot=Object.fromEntries(DATA.quarterly_fin.map(x=>[x.p,x.rev]));
+const pct=rb.map(x=>{const t=x.total??tot[x.p];return t&&x.md!=null?+(x.md/t*100).toFixed(1):null;});
+new Chart($("c10"),{data:{labels:rb.map(x=>x.p),datasets:[
+{type:"bar",label:"Market data rev $M",data:rb.map(x=>x.md),backgroundColor:NAVY2,order:2},
+{type:"line",label:"% of total revenue",data:pct,yAxisID:"y2",borderColor:AMBER,backgroundColor:AMBER,pointRadius:2,spanGaps:true,order:1}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"$M"}},y2:{position:"right",grid:{display:false},ticks:{callback:v=>v+"%"}}}}});
+const last=rb[rb.length-1];
+$("chips10").innerHTML=`<span class="chip">${last.p} market data <b>$${last.md}M</b> R</span><span class="chip"><b>${pct[pct.length-1]??"—"}%</b> of revenue D</span><span class="chip">the floor under volume cyclicality</span>`;})();
+
+/* P11 rates ADV vs UST coupon issuance */
+(()=>{const iss=DATA.macro?.ust_issuance_q||[];const bl=DATA.byline;
+const qs=iss.map(x=>x.p).filter(p=>bl[p]?.adv?.rates!=null);
+if(qs.length<4){empty("c11","needs quarterly rates ADV (backfill in progress) — issuance series already loaded");return;}
+const im=Object.fromEntries(iss.map(x=>[x.p,x]));
+new Chart($("c11"),{data:{labels:qs,datasets:[
+{type:"bar",label:"UST coupon issuance $B/qtr",data:qs.map(p=>im[p].coupon_b),backgroundColor:ICE,yAxisID:"y2",order:2},
+{type:"line",label:"Rates ADV M/day",data:qs.map(p=>bl[p].adv.rates),borderColor:NAVY,backgroundColor:NAVY,pointRadius:2,borderWidth:2,order:1}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"M contracts/day"}},y2:{position:"right",grid:{display:false},title:{display:true,text:"$B/qtr"}}}}});
+const lp=qs[qs.length-1];
+$("chips11").innerHTML=`<span class="chip">${lp} rates ADV <b>${bl[lp].adv.rates.toFixed(1)}M</b> R</span><span class="chip">coupon issuance <b>$${(im[lp].coupon_b/1000).toFixed(2)}T</b>/qtr R</span><span class="chip">4-qtr divergence trips tripwire #3</span>`;})();
+
+/* P12 valuation — TTM adjusted P/E with history bands */
+(()=>{const eps=(DATA.adj_eps||[]).slice().sort((a,b)=>a.p<b.p?-1:1);
+if(eps.length<8){empty("c12","unlocks with the adjusted-EPS backfill (in progress)");return;}
+const em=Object.fromEntries(eps.map(x=>[x.p,x.v]));
+const qOf=d=>d.slice(0,4)+"Q"+Math.ceil(+d.slice(5,7)/3);
+const prevQ=(p,n)=>{let y=+p.slice(0,4),q=+p.slice(5);q-=n;while(q<1){q+=4;y--;}return y+"Q"+q;};
+const pts=DATA.price.filter(x=>/\d{4}-\d{2}-(30|31)$/.test(x.d)).map(x=>{const p=qOf(x.d);
+ const four=[0,1,2,3].map(i=>em[prevQ(p,i)]);if(four.some(v=>v==null))return null;
+ return {p,pe:+(x.px/four.reduce((a,b)=>a+b,0)).toFixed(1)};}).filter(Boolean);
+if(pts.length<8){empty("c12","needs 8+ quarters of TTM adjusted EPS × quarter-end price");return;}
+const sorted=pts.map(x=>x.pe).slice().sort((a,b)=>a-b);
+const pc=f=>sorted[Math.min(sorted.length-1,Math.floor(f*sorted.length))];
+const med=pc(0.5),lo=pc(0.2),hi=pc(0.8);
+new Chart($("c12"),{type:"line",data:{labels:pts.map(x=>x.p),datasets:[
+{label:"TTM adj P/E",data:pts.map(x=>x.pe),borderColor:NAVY,backgroundColor:NAVY,pointRadius:2,borderWidth:2},
+{label:"median "+med.toFixed(1)+"×",data:pts.map(_=>med),borderColor:GRAY,borderDash:[5,4],pointRadius:0,borderWidth:1},
+{label:"P20",data:pts.map(_=>lo),borderColor:GREEN,borderDash:[3,4],pointRadius:0,borderWidth:1},
+{label:"P80",data:pts.map(_=>hi),borderColor:RED,borderDash:[3,4],pointRadius:0,borderWidth:1}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{boxWidth:9,font:{size:9}}}},scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"× TTM adj EPS"}}}}});
+const cur=pts[pts.length-1];
+$("chips12").innerHTML=`<span class="chip">now <b>${cur.pe}×</b> (${cur.p}) D</span><span class="chip">history: P20 <b>${lo.toFixed(1)}×</b> · median <b>${med.toFixed(1)}×</b> · P80 <b>${hi.toFixed(1)}×</b></span><span class="chip">from R adj EPS + R closes</span>`;})();
 
 /* P7 tripwires */
 (()=>{const box=$("twchips");

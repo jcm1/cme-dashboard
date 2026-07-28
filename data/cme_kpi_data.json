@@ -14,388 +14,405 @@
  "quarterly_fin": [
   {
    "p": "2016Q1",
-   "rev": 934,
-   "opex_g": 360,
-   "opinc_g": 574,
-   "src": "macrotrends/filings"
+   "rev": 934.2,
+   "opex_g": 360.3,
+   "opinc_g": 573.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2016Q2",
-   "rev": 906,
-   "opex_g": 343,
-   "opinc_g": 563,
-   "src": "macrotrends/filings"
+   "rev": 906.4,
+   "opex_g": 343.1,
+   "opinc_g": 563.3,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2016Q3",
-   "rev": 841,
-   "opex_g": 316,
-   "opinc_g": 525,
-   "src": "macrotrends/filings"
+   "rev": 841.7,
+   "opex_g": 316.4,
+   "opinc_g": 525.3,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2016Q4",
-   "rev": 913,
-   "opex_g": 375,
-   "opinc_g": 538,
-   "src": "macrotrends/filings"
+   "rev": 912.9,
+   "opex_g": 372.7,
+   "opinc_g": 540.2,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2017Q1",
-   "rev": 929,
-   "opex_g": 328,
-   "opinc_g": 601,
-   "src": "macrotrends/filings"
+   "rev": 929.3,
+   "opex_g": 328.1,
+   "opinc_g": 601.2,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2017Q2",
-   "rev": 924,
+   "rev": 924.6,
    "opex_g": 319,
-   "opinc_g": 605,
-   "src": "macrotrends/filings"
+   "opinc_g": 605.6,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2017Q3",
-   "rev": 891,
-   "opex_g": 323,
-   "opinc_g": 568,
-   "src": "macrotrends/filings"
+   "rev": 890.8,
+   "opex_g": 322.9,
+   "opinc_g": 567.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2017Q4",
    "rev": 900,
-   "opex_g": 363,
-   "opinc_g": 537,
-   "src": "macrotrends/filings"
+   "opex_g": 362.7,
+   "opinc_g": 537.3,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2018Q1",
    "rev": 1109,
-   "opex_g": 368,
-   "opinc_g": 741,
-   "src": "macrotrends/filings"
+   "opex_g": 368.1,
+   "opinc_g": 740.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2018Q2",
-   "rev": 1060,
-   "opex_g": 393,
-   "opinc_g": 667,
-   "src": "macrotrends/filings"
+   "rev": 1059.6,
+   "opex_g": 392.7,
+   "opinc_g": 666.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2018Q3",
-   "rev": 904,
-   "opex_g": 354,
-   "opinc_g": 550,
-   "src": "macrotrends/filings"
+   "rev": 904.2,
+   "opex_g": 354.3,
+   "opinc_g": 549.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2018Q4",
-   "rev": 1237,
-   "opex_g": 587,
-   "opinc_g": 650,
-   "src": "macrotrends/filings"
+   "rev": 1236.6,
+   "opex_g": 586.7,
+   "opinc_g": 649.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2019Q1",
-   "rev": 1180,
-   "opex_g": 549,
-   "opinc_g": 631,
-   "src": "macrotrends/filings"
+   "rev": 1179.6,
+   "opex_g": 548.6,
+   "opinc_g": 631.0,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2019Q2",
-   "rev": 1273,
-   "opex_g": 574,
-   "opinc_g": 699,
-   "src": "macrotrends/filings"
+   "rev": 1272.7,
+   "opex_g": 574.1,
+   "opinc_g": 698.6,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2019Q3",
-   "rev": 1277,
-   "opex_g": 592,
-   "opinc_g": 685,
-   "src": "macrotrends/filings"
+   "rev": 1277.3,
+   "opex_g": 592.1,
+   "opinc_g": 685.2,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2019Q4",
-   "rev": 1138,
-   "opex_g": 565,
-   "opinc_g": 573,
-   "src": "macrotrends/filings"
+   "rev": 1138.4,
+   "opex_g": 565.4,
+   "opinc_g": 573.0,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2020Q1",
-   "rev": 1522,
-   "opex_g": 562,
-   "opinc_g": 960,
-   "src": "macrotrends/filings"
+   "rev": 1522.1,
+   "opex_g": 562.2,
+   "opinc_g": 959.9,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2020Q2",
-   "rev": 1183,
-   "opex_g": 545,
-   "opinc_g": 638,
-   "src": "macrotrends/filings"
+   "rev": 1182.3,
+   "opex_g": 544.8,
+   "opinc_g": 637.5,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2020Q3",
-   "rev": 1081,
-   "opex_g": 556,
-   "opinc_g": 525,
-   "src": "macrotrends/filings"
+   "rev": 1080.7,
+   "opex_g": 555.7,
+   "opinc_g": 525.0,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2020Q4",
-   "rev": 1099,
-   "opex_g": 584,
-   "opinc_g": 515,
-   "src": "macrotrends/filings"
+   "rev": 1098.5,
+   "opex_g": 583.5,
+   "opinc_g": 515.0,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2021Q1",
-   "rev": 1253,
-   "opex_g": 528,
-   "opinc_g": 725,
-   "src": "macrotrends/filings"
+   "rev": 1253.3,
+   "opex_g": 528.2,
+   "opinc_g": 725.1,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2021Q2",
-   "rev": 1180,
-   "opex_g": 505,
-   "opinc_g": 675,
-   "src": "macrotrends/filings"
+   "rev": 1179.2,
+   "opex_g": 504.5,
+   "opinc_g": 674.7,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2021Q3",
-   "rev": 1110,
-   "opex_g": 496,
-   "opinc_g": 614,
-   "src": "macrotrends/filings"
+   "rev": 1109.9,
+   "opex_g": 496.2,
+   "opinc_g": 613.7,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2021Q4",
-   "rev": 1148,
-   "opex_g": 516,
-   "opinc_g": 632,
-   "src": "macrotrends/filings"
+   "rev": 1147.3,
+   "opex_g": 515.6,
+   "opinc_g": 631.7,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2022Q1",
-   "rev": 1347,
-   "opex_g": 488,
-   "opinc_g": 859,
-   "src": "macrotrends/filings"
+   "rev": 1346.6,
+   "opex_g": 487.5,
+   "opinc_g": 859.1,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2022Q2",
-   "rev": 1238,
-   "opex_g": 488,
-   "opinc_g": 750,
-   "src": "macrotrends/filings"
+   "rev": 1237.2,
+   "opex_g": 487.5,
+   "opinc_g": 749.7,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2022Q3",
-   "rev": 1228,
+   "rev": 1227.8,
    "opex_g": 489,
-   "opinc_g": 739,
-   "src": "macrotrends/filings"
+   "opinc_g": 738.8,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2022Q4",
-   "rev": 1208,
-   "opex_g": 540,
-   "opinc_g": 668,
-   "src": "macrotrends/filings"
+   "rev": 1207.8,
+   "opex_g": 539.5,
+   "opinc_g": 668.3,
+   "src": "macrotrends/filings | IR backfill R"
   },
   {
    "p": "2023Q1",
-   "rev": 1442,
-   "opex_g": 528,
-   "opinc_g": 914,
-   "src": "macrotrends/filings"
+   "rev": 1441.6,
+   "opex_g": 527.9,
+   "opinc_g": 913.7,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 459,
+   "adj_opinc": 982.6
   },
   {
    "p": "2023Q2",
-   "rev": 1361,
-   "opex_g": 522,
-   "opinc_g": 839,
-   "src": "macrotrends/filings"
+   "rev": 1360.2,
+   "opex_g": 521.6,
+   "opinc_g": 838.6,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 452,
+   "adj_opinc": 908.2
   },
   {
    "p": "2023Q3",
-   "rev": 1338,
-   "opex_g": 518,
-   "opinc_g": 820,
-   "src": "macrotrends/filings"
+   "rev": 1337.8,
+   "opex_g": 517.6,
+   "opinc_g": 820.2,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 448,
+   "adj_opinc": 889.8
   },
   {
    "p": "2023Q4",
-   "rev": 1439,
-   "opex_g": 576,
-   "opinc_g": 863,
-   "src": "macrotrends/filings"
+   "rev": 1439.3,
+   "opex_g": 576.1,
+   "opinc_g": 863.2,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 490,
+   "adj_opinc": 949.3
   },
   {
    "p": "2024Q1",
-   "rev": 1488,
-   "opex_g": 528,
-   "opinc_g": 960,
-   "src": "macrotrends/filings"
+   "rev": 1487.9,
+   "opex_g": 528.3,
+   "opinc_g": 959.6,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 462,
+   "adj_opinc": 1025.9
   },
   {
    "p": "2024Q2",
-   "rev": 1533,
-   "opex_g": 532,
-   "opinc_g": 1001,
-   "src": "macrotrends/filings"
+   "rev": 1532.5,
+   "opex_g": 531.9,
+   "opinc_g": 1000.6,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 474,
+   "adj_opinc": 1058.5
   },
   {
    "p": "2024Q3",
-   "rev": 1584,
-   "opex_g": 560,
-   "opinc_g": 1024,
-   "src": "macrotrends/filings"
+   "rev": 1584.4,
+   "opex_g": 560.2,
+   "opinc_g": 1024.2,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 489,
+   "adj_opinc": 1095.4
   },
   {
    "p": "2024Q4",
-   "rev": 1525,
-   "opex_g": 578,
-   "opinc_g": 947,
-   "src": "macrotrends/filings"
+   "rev": 1525.3,
+   "opex_g": 578.2,
+   "opinc_g": 947.1,
+   "src": "macrotrends/filings | IR backfill R",
+   "adj_opex": 520,
+   "adj_opinc": 1005.3
   },
   {
    "p": "2025Q1",
-   "rev": 1642,
-   "opex_g": 534,
-   "opinc_g": 1108,
-   "src": "macrotrends/filings | adj: R (release; adj margin 71.1%)",
-   "adj_opex": 475,
-   "adj_opinc": 1167
+   "rev": 1642.3,
+   "opex_g": 534.3,
+   "opinc_g": 1108.0,
+   "src": "macrotrends/filings | adj: R (release; adj margin 71.1%) | IR backfill R",
+   "adj_opex": 474.6,
+   "adj_opinc": 1167.7
   },
   {
    "p": "2025Q2",
-   "rev": 1690,
-   "opex_g": 563,
-   "opinc_g": 1127,
-   "src": "release R / macrotrends opex | adj: E-split",
-   "adj_opex": 495,
-   "adj_opinc": 1195
+   "rev": 1692,
+   "opex_g": 562.7,
+   "opinc_g": 1129.3,
+   "src": "release R / macrotrends opex | adj: E-split | IR backfill R",
+   "adj_opex": 491.2,
+   "adj_opinc": 1200.8
   },
   {
    "p": "2025Q3",
-   "rev": 1537,
-   "opex_g": 580,
-   "opinc_g": 957,
-   "src": "release-derived D; opex pending | rev D; opex E-split tying FY25 GAAP ~2,289; adj E-split tying FY25 adj 1,995.8",
-   "adj_opex": 500,
-   "adj_opinc": 1037
+   "rev": 1537.6,
+   "opex_g": 565,
+   "opinc_g": 972.6,
+   "src": "release-derived D; opex pending | rev D; opex E-split tying FY25 GAAP ~2,289; adj E-split tying FY25 adj 1,995.8 | IR backfill R",
+   "adj_opex": 486.6,
+   "adj_opinc": 1051.0
   },
   {
    "p": "2025Q4",
-   "rev": 1652,
-   "opex_g": 612,
-   "opinc_g": 1040,
-   "src": "FY25 residual D | FY residuals D/E",
-   "adj_opex": 525.8,
-   "adj_opinc": 1126.2
+   "rev": 1648.7,
+   "opex_g": 629.1,
+   "opinc_g": 1019.6,
+   "src": "FY25 residual D | FY residuals D/E | IR backfill R",
+   "adj_opex": 543.4,
+   "adj_opinc": 1105.3
   },
   {
    "p": "2026Q1",
-   "rev": 1754,
-   "opex_g": null,
-   "opinc_g": null,
-   "src": "release R - aggregator shows 1880 [verify 10-Q] | adj: E (~71% adj margin)",
-   "adj_opex": 505,
-   "adj_opinc": 1249
+   "rev": 1880.1,
+   "opex_g": 570.4,
+   "opinc_g": 1309.7,
+   "src": "release R - aggregator shows 1880 [verify 10-Q] | adj: E (~71% adj margin) | IR backfill R",
+   "adj_opex": 511.7,
+   "adj_opinc": 1368.4
   },
   {
    "p": "2026Q2",
-   "rev": 1706,
-   "opex_g": null,
-   "opinc_g": null,
+   "rev": 1706.2,
+   "opex_g": 599.1,
+   "opinc_g": 1107.1,
    "adj_opex": 521.2,
-   "adj_opinc": 1184.8,
-   "src": "Q2'26 release R/D | adj: R/D"
+   "adj_opinc": 1185.0,
+   "src": "Q2'26 release R/D | adj: R/D | IR backfill R"
   }
  ],
  "adv_total": [
   {
    "p": "FY2016",
-   "adv": 15.6,
-   "src": "E [verify]"
+   "adv": 15.649,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2017",
-   "adv": 16.3,
-   "src": "E [verify]"
+   "adv": 16.292,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2018",
-   "adv": 19.2,
-   "src": "E [verify]"
+   "adv": 19.224,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2019",
-   "adv": 19.2,
-   "src": "E [verify]"
+   "adv": 19.167,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2020",
-   "adv": 19.1,
-   "src": "E [verify]"
+   "adv": 19.054,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2021",
-   "adv": 19.6,
-   "src": "R"
+   "adv": 19.614,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2022",
-   "adv": 23.3,
-   "src": "R"
+   "adv": 23.291,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2023",
-   "adv": 24.4,
-   "src": "E [verify]"
+   "adv": 24.394,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2024",
-   "adv": 26.5,
-   "src": "E [verify]"
+   "adv": 26.528,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "FY2025",
-   "adv": 28.1,
-   "src": "R"
+   "adv": 28.129,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "2025Q2",
-   "adv": 30.2,
-   "src": "R"
+   "adv": 30.217,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "2026Q1",
-   "adv": 36.2,
-   "src": "R record"
+   "adv": 36.231,
+   "src": "R (IR backfill verified)"
   },
   {
    "p": "2026Q2",
-   "adv": 29.8,
-   "src": "R"
+   "adv": 29.843,
+   "src": "R (IR backfill verified)"
   }
  ],
  "byline": {
   "FY2025": {
-   "src": "D",
+   "src": "D | IR backfill R",
    "adv": {
-    "rates": 14.2,
-    "equity": 7.4,
-    "energy": 2.7,
-    "ags": 1.9,
-    "metals": 1.0,
-    "fx": 1.0
+    "rates": 14.203,
+    "equity": 7.41,
+    "energy": 2.695,
+    "ags": 1.853,
+    "metals": 0.988,
+    "fx": 0.98,
+    "total": 28.129
    },
    "rpc": {
     "rates": 0.482,
@@ -408,32 +425,1003 @@
    "blend": 0.696
   },
   "2026Q1": {
-   "src": "releases R/D",
+   "src": "releases R/D | IR backfill R",
    "adv": {
-    "rates": 18.7,
-    "equity": 8.7,
-    "energy": 4.0,
-    "ags": 1.6,
-    "metals": 1.7,
-    "fx": 1.5
+    "rates": 18.674,
+    "equity": 8.655,
+    "energy": 3.985,
+    "ags": 2.042,
+    "metals": 1.682,
+    "fx": 1.193,
+    "total": 36.231
    },
    "rpc": {
     "rates": 0.457,
-    "equity": 0.597
+    "equity": 0.597,
+    "energy": 1.084,
+    "ags": 1.344,
+    "metals": 1.153,
+    "fx": 0.78
    },
    "blend": 0.652
   },
   "2026Q2": {
-   "src": "total+rates R; other lines E-split",
+   "src": "total+rates R; other lines E-split | IR backfill R",
    "adv": {
-    "rates": 14.5,
-    "equity": 7.9,
-    "energy": 3.3,
-    "ags": 1.65,
-    "metals": 1.3,
-    "fx": 1.15
+    "rates": 14.532,
+    "equity": 8.633,
+    "energy": 2.667,
+    "ags": 2.08,
+    "metals": 0.941,
+    "fx": 0.989,
+    "total": 29.843
    },
-   "blend": 0.678
+   "blend": 0.678,
+   "rpc": {
+    "rates": 0.48,
+    "equity": 0.605,
+    "energy": 1.131,
+    "ags": 1.426,
+    "metals": 1.315,
+    "fx": 0.813
+   }
+  },
+  "2017Q1": {
+   "adv": {
+    "rates": 9.169,
+    "equity": 2.766,
+    "energy": 2.496,
+    "ags": 1.261,
+    "metals": 0.512,
+    "fx": 0.894,
+    "total": 17.098
+   },
+   "rpc": {
+    "rates": 0.492,
+    "equity": 0.718,
+    "energy": 1.13,
+    "ags": 1.334,
+    "metals": 1.496,
+    "fx": 0.823
+   },
+   "blend": 0.731,
+   "src": "IR backfill R"
+  },
+  "2017Q2": {
+   "adv": {
+    "rates": 8.21,
+    "equity": 2.707,
+    "energy": 2.632,
+    "ags": 1.492,
+    "metals": 0.533,
+    "fx": 0.879,
+    "total": 16.453
+   },
+   "rpc": {
+    "rates": 0.491,
+    "equity": 0.731,
+    "energy": 1.096,
+    "ags": 1.3,
+    "metals": 1.449,
+    "fx": 0.807
+   },
+   "blend": 0.749,
+   "src": "IR backfill R"
+  },
+  "2017Q3": {
+   "adv": {
+    "rates": 7.424,
+    "equity": 2.624,
+    "energy": 2.693,
+    "ags": 1.381,
+    "metals": 0.611,
+    "fx": 0.971,
+    "total": 15.704
+   },
+   "rpc": {
+    "rates": 0.485,
+    "equity": 0.738,
+    "energy": 1.072,
+    "ags": 1.251,
+    "metals": 1.376,
+    "fx": 0.796
+   },
+   "blend": 0.749,
+   "src": "IR backfill R"
+  },
+  "2017Q4": {
+   "adv": {
+    "rates": 7.97,
+    "equity": 2.632,
+    "energy": 2.489,
+    "ags": 1.278,
+    "metals": 0.616,
+    "fx": 0.941,
+    "total": 15.925
+   },
+   "rpc": {
+    "rates": 0.467,
+    "equity": 0.768,
+    "energy": 1.133,
+    "ags": 1.251,
+    "metals": 1.315,
+    "fx": 0.785
+   },
+   "blend": 0.736,
+   "src": "IR backfill R"
+  },
+  "2018Q1": {
+   "adv": {
+    "rates": 11.948,
+    "equity": 4.096,
+    "energy": 2.754,
+    "ags": 1.593,
+    "metals": 0.713,
+    "fx": 1.1,
+    "total": 22.204
+   },
+   "rpc": {
+    "rates": 0.464,
+    "equity": 0.781,
+    "energy": 1.14,
+    "ags": 1.246,
+    "metals": 1.367,
+    "fx": 0.762
+   },
+   "blend": 0.706,
+   "src": "IR backfill R"
+  },
+  "2018Q2": {
+   "adv": {
+    "rates": 9.2,
+    "equity": 3.086,
+    "energy": 2.63,
+    "ags": 1.734,
+    "metals": 0.674,
+    "fx": 1.035,
+    "total": 18.359
+   },
+   "rpc": {
+    "rates": 0.491,
+    "equity": 0.797,
+    "energy": 1.142,
+    "ags": 1.274,
+    "metals": 1.403,
+    "fx": 0.741
+   },
+   "blend": 0.757,
+   "src": "IR backfill R"
+  },
+  "2018Q3": {
+   "adv": {
+    "rates": 7.798,
+    "equity": 2.671,
+    "energy": 2.199,
+    "ags": 1.349,
+    "metals": 0.623,
+    "fx": 0.944,
+    "total": 15.584
+   },
+   "rpc": {
+    "rates": 0.493,
+    "equity": 0.761,
+    "energy": 1.187,
+    "ags": 1.258,
+    "metals": 1.379,
+    "fx": 0.743
+   },
+   "blend": 0.753,
+   "src": "IR backfill R"
+  },
+  "2018Q4": {
+   "adv": {
+    "rates": 10.919,
+    "equity": 4.51,
+    "energy": 2.665,
+    "ags": 1.248,
+    "metals": 0.547,
+    "fx": 0.942,
+    "total": 20.831
+   },
+   "rpc": {
+    "rates": 0.475,
+    "equity": 0.715,
+    "energy": 1.15,
+    "ags": 1.261,
+    "metals": 1.428,
+    "fx": 0.72
+   },
+   "blend": 0.697,
+   "src": "IR backfill R"
+  },
+  "2025Q1": {
+   "adv": {
+    "rates": 15.029,
+    "equity": 7.997,
+    "energy": 2.903,
+    "ags": 1.958,
+    "metals": 0.732,
+    "fx": 1.149,
+    "total": 29.768
+   },
+   "rpc": {
+    "rates": 0.476,
+    "equity": 0.624,
+    "energy": 1.222,
+    "ags": 1.376,
+    "metals": 1.588,
+    "fx": 0.762
+   },
+   "blend": 0.686,
+   "src": "IR backfill R"
+  },
+  "2025Q2": {
+   "adv": {
+    "rates": 15.472,
+    "equity": 7.661,
+    "energy": 3.082,
+    "ags": 1.964,
+    "metals": 0.943,
+    "fx": 1.096,
+    "total": 30.217
+   },
+   "rpc": {
+    "rates": 0.481,
+    "equity": 0.635,
+    "energy": 1.138,
+    "ags": 1.435,
+    "metals": 1.456,
+    "fx": 0.772
+   },
+   "blend": 0.69,
+   "src": "IR backfill R"
+  },
+  "2025Q3": {
+   "adv": {
+    "rates": 13.378,
+    "equity": 6.278,
+    "energy": 2.295,
+    "ags": 1.712,
+    "metals": 0.825,
+    "fx": 0.834,
+    "total": 25.322
+   },
+   "rpc": {
+    "rates": 0.487,
+    "equity": 0.652,
+    "energy": 1.214,
+    "ags": 1.423,
+    "metals": 1.505,
+    "fx": 0.841
+   },
+   "blend": 0.702,
+   "src": "IR backfill R"
+  },
+  "2025Q4": {
+   "adv": {
+    "rates": 13.01,
+    "equity": 7.738,
+    "energy": 2.523,
+    "ags": 1.787,
+    "metals": 1.441,
+    "fx": 0.853,
+    "total": 27.353
+   },
+   "rpc": {
+    "rates": 0.486,
+    "equity": 0.611,
+    "energy": 1.245,
+    "ags": 1.427,
+    "metals": 1.295,
+    "fx": 0.847
+   },
+   "blend": 0.707,
+   "src": "IR backfill R"
+  },
+  "2021Q1": {
+   "adv": {
+    "rates": 10.349,
+    "equity": 6.117,
+    "energy": 2.363,
+    "ags": 1.471,
+    "metals": 0.675,
+    "fx": 0.852,
+    "total": 21.827
+   },
+   "rpc": {
+    "rates": 0.475,
+    "equity": 0.532,
+    "energy": 1.097,
+    "ags": 1.343,
+    "metals": 1.415,
+    "fx": 0.779
+   },
+   "blend": 0.658,
+   "src": "IR backfill R"
+  },
+  "2021Q2": {
+   "adv": {
+    "rates": 8.581,
+    "equity": 4.926,
+    "energy": 1.963,
+    "ags": 1.631,
+    "metals": 0.568,
+    "fx": 0.769,
+    "total": 18.438
+   },
+   "rpc": {
+    "rates": 0.491,
+    "equity": 0.555,
+    "energy": 1.14,
+    "ags": 1.343,
+    "metals": 1.438,
+    "fx": 0.805
+   },
+   "blend": 0.695,
+   "src": "IR backfill R"
+  },
+  "2021Q3": {
+   "adv": {
+    "rates": 8.111,
+    "equity": 5.1,
+    "energy": 2.179,
+    "ags": 1.141,
+    "metals": 0.48,
+    "fx": 0.776,
+    "total": 17.786
+   },
+   "rpc": {
+    "rates": 0.483,
+    "equity": 0.555,
+    "energy": 1.127,
+    "ags": 1.319,
+    "metals": 1.463,
+    "fx": 0.803
+   },
+   "blend": 0.677,
+   "src": "IR backfill R"
+  },
+  "2021Q4": {
+   "adv": {
+    "rates": 9.805,
+    "equity": 5.943,
+    "energy": 2.252,
+    "ags": 1.216,
+    "metals": 0.475,
+    "fx": 0.8,
+    "total": 20.49
+   },
+   "rpc": {
+    "rates": 0.487,
+    "equity": 0.526,
+    "energy": 1.111,
+    "ags": 1.323,
+    "metals": 1.452,
+    "fx": 0.779
+   },
+   "blend": 0.65,
+   "src": "IR backfill R"
+  },
+  "2022Q1": {
+   "adv": {
+    "rates": 12.484,
+    "equity": 7.95,
+    "energy": 2.515,
+    "ags": 1.474,
+    "metals": 0.593,
+    "fx": 0.904,
+    "total": 25.92
+   },
+   "rpc": {
+    "rates": 0.484,
+    "equity": 0.526,
+    "energy": 1.124,
+    "ags": 1.378,
+    "metals": 1.482,
+    "fx": 0.8
+   },
+   "blend": 0.644,
+   "src": "IR backfill R"
+  },
+  "2022Q2": {
+   "adv": {
+    "rates": 10.63,
+    "equity": 7.751,
+    "energy": 1.932,
+    "ags": 1.308,
+    "metals": 0.484,
+    "fx": 0.95,
+    "total": 23.055
+   },
+   "rpc": {
+    "rates": 0.493,
+    "equity": 0.532,
+    "energy": 1.171,
+    "ags": 1.411,
+    "metals": 1.506,
+    "fx": 0.767
+   },
+   "blend": 0.647,
+   "src": "IR backfill R"
+  },
+  "2022Q3": {
+   "adv": {
+    "rates": 10.357,
+    "equity": 7.445,
+    "energy": 1.837,
+    "ags": 1.208,
+    "metals": 0.498,
+    "fx": 1.091,
+    "total": 22.437
+   },
+   "rpc": {
+    "rates": 0.479,
+    "equity": 0.524,
+    "energy": 1.14,
+    "ags": 1.351,
+    "metals": 1.52,
+    "fx": 0.729
+   },
+   "blend": 0.631,
+   "src": "IR backfill R"
+  },
+  "2022Q4": {
+   "adv": {
+    "rates": 9.832,
+    "equity": 7.465,
+    "energy": 1.829,
+    "ags": 1.171,
+    "metals": 0.508,
+    "fx": 1,
+    "total": 21.803
+   },
+   "rpc": {
+    "rates": 0.5,
+    "equity": 0.535,
+    "energy": 1.181,
+    "ags": 1.356,
+    "metals": 1.519,
+    "fx": 0.756
+   },
+   "blend": 0.651,
+   "src": "IR backfill R"
+  },
+  "2019Q1": {
+   "adv": {
+    "rates": 10.314,
+    "equity": 3.161,
+    "energy": 2.331,
+    "ags": 1.381,
+    "metals": 0.561,
+    "fx": 0.885,
+    "total": 18.633
+   },
+   "rpc": {
+    "rates": 0.481,
+    "equity": 0.757,
+    "energy": 1.159,
+    "ags": 1.246,
+    "metals": 1.488,
+    "fx": 0.763
+   },
+   "blend": 0.713,
+   "src": "IR backfill R"
+  },
+  "2019Q2": {
+   "adv": {
+    "rates": 11.593,
+    "equity": 3.48,
+    "energy": 2.499,
+    "ags": 1.839,
+    "metals": 0.633,
+    "fx": 0.874,
+    "total": 20.918
+   },
+   "rpc": {
+    "rates": 0.476,
+    "equity": 0.676,
+    "energy": 1.139,
+    "ags": 1.222,
+    "metals": 1.455,
+    "fx": 0.713
+   },
+   "blend": 0.693,
+   "src": "IR backfill R"
+  },
+  "2019Q3": {
+   "adv": {
+    "rates": 10.868,
+    "equity": 3.931,
+    "energy": 2.456,
+    "ags": 1.32,
+    "metals": 0.821,
+    "fx": 0.851,
+    "total": 20.247
+   },
+   "rpc": {
+    "rates": 0.5,
+    "equity": 0.612,
+    "energy": 1.137,
+    "ags": 1.234,
+    "metals": 1.414,
+    "fx": 0.72
+   },
+   "blend": 0.693,
+   "src": "IR backfill R"
+  },
+  "2019Q4": {
+   "adv": {
+    "rates": 8.638,
+    "equity": 3.252,
+    "energy": 2.213,
+    "ags": 1.278,
+    "metals": 0.652,
+    "fx": 0.839,
+    "total": 16.872
+   },
+   "rpc": {
+    "rates": 0.507,
+    "equity": 0.654,
+    "energy": 1.133,
+    "ags": 1.242,
+    "metals": 1.344,
+    "fx": 0.732
+   },
+   "blend": 0.717,
+   "src": "IR backfill R"
+  },
+  "2020Q1": {
+   "adv": {
+    "rates": 13.813,
+    "equity": 6.498,
+    "energy": 3.228,
+    "ags": 1.506,
+    "metals": 0.889,
+    "fx": 1.079,
+    "total": 27.013
+   },
+   "rpc": {
+    "rates": 0.488,
+    "equity": 0.616,
+    "energy": 1.108,
+    "ags": 1.26,
+    "metals": 1.429,
+    "fx": 0.721
+   },
+   "blend": 0.676,
+   "src": "IR backfill R"
+  },
+  "2020Q2": {
+   "adv": {
+    "rates": 6.89,
+    "equity": 5.568,
+    "energy": 2.586,
+    "ags": 1.311,
+    "metals": 0.519,
+    "fx": 0.725,
+    "total": 17.599
+   },
+   "rpc": {
+    "rates": 0.51,
+    "equity": 0.574,
+    "energy": 1.191,
+    "ags": 1.316,
+    "metals": 1.518,
+    "fx": 0.786
+   },
+   "blend": 0.731,
+   "src": "IR backfill R"
+  },
+  "2020Q3": {
+   "adv": {
+    "rates": 5.315,
+    "equity": 5.41,
+    "energy": 1.852,
+    "ags": 1.372,
+    "metals": 0.825,
+    "fx": 0.829,
+    "total": 15.603
+   },
+   "rpc": {
+    "rates": 0.506,
+    "equity": 0.525,
+    "energy": 1.171,
+    "ags": 1.284,
+    "metals": 1.309,
+    "fx": 0.763
+   },
+   "blend": 0.716,
+   "src": "IR backfill R"
+  },
+  "2020Q4": {
+   "adv": {
+    "rates": 6.273,
+    "equity": 5.148,
+    "energy": 1.94,
+    "ags": 1.478,
+    "metals": 0.568,
+    "fx": 0.818,
+    "total": 16.225
+   },
+   "rpc": {
+    "rates": 0.49,
+    "equity": 0.523,
+    "energy": 1.165,
+    "ags": 1.301,
+    "metals": 1.389,
+    "fx": 0.739
+   },
+   "blend": 0.699,
+   "src": "IR backfill R"
+  },
+  "2016Q1": {
+   "adv": {
+    "rates": 8.246,
+    "equity": 3.557,
+    "energy": 2.536,
+    "ags": 1.206,
+    "metals": 0.455,
+    "fx": 0.944,
+    "total": 16.944
+   },
+   "rpc": {
+    "rates": 0.501,
+    "equity": 0.726,
+    "energy": 1.203,
+    "ags": 1.321,
+    "metals": 1.597,
+    "fx": 0.767
+   },
+   "blend": 0.756,
+   "src": "IR backfill R"
+  },
+  "2016Q2": {
+   "adv": {
+    "rates": 6.776,
+    "equity": 2.957,
+    "energy": 2.322,
+    "ags": 1.722,
+    "metals": 0.467,
+    "fx": 0.838,
+    "total": 15.082
+   },
+   "rpc": {
+    "rates": 0.496,
+    "equity": 0.709,
+    "energy": 1.168,
+    "ags": 1.291,
+    "metals": 1.562,
+    "fx": 0.798
+   },
+   "blend": 0.782,
+   "src": "IR backfill R"
+  },
+  "2016Q3": {
+   "adv": {
+    "rates": 6.791,
+    "equity": 2.876,
+    "energy": 2.294,
+    "ags": 1.156,
+    "metals": 0.431,
+    "fx": 0.771,
+    "total": 14.319
+   },
+   "rpc": {
+    "rates": 0.508,
+    "equity": 0.676,
+    "energy": 1.097,
+    "ags": 1.335,
+    "metals": 1.542,
+    "fx": 0.806
+   },
+   "blend": 0.75,
+   "src": "IR backfill R"
+  },
+  "2016Q4": {
+   "adv": {
+    "rates": 8.3,
+    "equity": 2.875,
+    "energy": 2.586,
+    "ags": 1.193,
+    "metals": 0.488,
+    "fx": 0.883,
+    "total": 16.325
+   },
+   "rpc": {
+    "rates": 0.491,
+    "equity": 0.691,
+    "energy": 1.099,
+    "ags": 1.336,
+    "metals": 1.486,
+    "fx": 0.804
+   },
+   "blend": 0.731,
+   "src": "IR backfill R"
+  },
+  "2023Q1": {
+   "adv": {
+    "rates": 14.49,
+    "equity": 7.303,
+    "energy": 2.083,
+    "ags": 1.379,
+    "metals": 0.649,
+    "fx": 0.969,
+    "total": 26.873
+   },
+   "rpc": {
+    "rates": 0.495,
+    "equity": 0.595,
+    "energy": 1.3,
+    "ags": 1.349,
+    "metals": 1.517,
+    "fx": 0.79
+   },
+   "blend": 0.664,
+   "src": "IR backfill R"
+  },
+  "2023Q2": {
+   "adv": {
+    "rates": 11.273,
+    "equity": 6.216,
+    "energy": 2.104,
+    "ags": 1.752,
+    "metals": 0.612,
+    "fx": 0.898,
+    "total": 22.855
+   },
+   "rpc": {
+    "rates": 0.505,
+    "equity": 0.644,
+    "energy": 1.347,
+    "ags": 1.356,
+    "metals": 1.487,
+    "fx": 0.8
+   },
+   "blend": 0.724,
+   "src": "IR backfill R"
+  },
+  "2023Q3": {
+   "adv": {
+    "rates": 10.967,
+    "equity": 6.353,
+    "energy": 2.126,
+    "ags": 1.433,
+    "metals": 0.528,
+    "fx": 0.942,
+    "total": 22.349
+   },
+   "rpc": {
+    "rates": 0.508,
+    "equity": 0.625,
+    "energy": 1.324,
+    "ags": 1.328,
+    "metals": 1.492,
+    "fx": 0.791
+   },
+   "blend": 0.707,
+   "src": "IR backfill R"
+  },
+  "2023Q4": {
+   "adv": {
+    "rates": 13.348,
+    "equity": 6.922,
+    "energy": 2.158,
+    "ags": 1.469,
+    "metals": 0.609,
+    "fx": 1.007,
+    "total": 25.513
+   },
+   "rpc": {
+    "rates": 0.488,
+    "equity": 0.616,
+    "energy": 1.338,
+    "ags": 1.361,
+    "metals": 1.502,
+    "fx": 0.806
+   },
+   "blend": 0.682,
+   "src": "IR backfill R"
+  },
+  "2024Q1": {
+   "adv": {
+    "rates": 13.839,
+    "equity": 6.856,
+    "energy": 2.412,
+    "ags": 1.596,
+    "metals": 0.675,
+    "fx": 0.984,
+    "total": 26.36
+   },
+   "rpc": {
+    "rates": 0.486,
+    "equity": 0.641,
+    "energy": 1.334,
+    "ags": 1.356,
+    "metals": 1.556,
+    "fx": 0.787
+   },
+   "blend": 0.695,
+   "src": "IR backfill R"
+  },
+  "2024Q2": {
+   "adv": {
+    "rates": 12.894,
+    "equity": 6.779,
+    "energy": 2.447,
+    "ags": 1.877,
+    "metals": 0.868,
+    "fx": 1.075,
+    "total": 25.941
+   },
+   "rpc": {
+    "rates": 0.484,
+    "equity": 0.628,
+    "energy": 1.297,
+    "ags": 1.366,
+    "metals": 1.511,
+    "fx": 0.754
+   },
+   "blend": 0.708,
+   "src": "IR backfill R"
+  },
+  "2024Q3": {
+   "adv": {
+    "rates": 14.881,
+    "equity": 7.407,
+    "energy": 2.571,
+    "ags": 1.614,
+    "metals": 0.728,
+    "fx": 1.089,
+    "total": 28.289
+   },
+   "rpc": {
+    "rates": 0.468,
+    "equity": 0.616,
+    "energy": 1.246,
+    "ags": 1.346,
+    "metals": 1.54,
+    "fx": 0.744
+   },
+   "blend": 0.666,
+   "src": "IR backfill R"
+  },
+  "2024Q4": {
+   "adv": {
+    "rates": 13.244,
+    "equity": 6.343,
+    "energy": 2.519,
+    "ags": 1.755,
+    "metals": 0.673,
+    "fx": 0.969,
+    "total": 25.503
+   },
+   "rpc": {
+    "rates": 0.485,
+    "equity": 0.658,
+    "energy": 1.237,
+    "ags": 1.359,
+    "metals": 1.53,
+    "fx": 0.778
+   },
+   "blend": 0.701,
+   "src": "IR backfill R"
+  },
+  "FY2016": {
+   "adv": {
+    "rates": 7.517,
+    "equity": 3.061,
+    "energy": 2.432,
+    "ags": 1.321,
+    "metals": 0.46,
+    "fx": 0.858,
+    "total": 15.649
+   },
+   "blend": 0.754,
+   "src": "IR backfill R"
+  },
+  "FY2017": {
+   "adv": {
+    "rates": 8.189,
+    "equity": 2.682,
+    "energy": 2.578,
+    "ags": 1.353,
+    "metals": 0.568,
+    "fx": 0.922,
+    "total": 16.292
+   },
+   "blend": 0.741,
+   "src": "IR backfill R"
+  },
+  "FY2018": {
+   "adv": {
+    "rates": 9.951,
+    "equity": 3.589,
+    "energy": 2.561,
+    "ags": 1.48,
+    "metals": 0.639,
+    "fx": 1.004,
+    "total": 19.224
+   },
+   "blend": 0.725,
+   "src": "IR backfill R"
+  },
+  "FY2019": {
+   "adv": {
+    "rates": 10.349,
+    "equity": 3.459,
+    "energy": 2.375,
+    "ags": 1.454,
+    "metals": 0.668,
+    "fx": 0.862,
+    "total": 19.167
+   },
+   "blend": 0.703,
+   "src": "IR backfill R"
+  },
+  "FY2020": {
+   "adv": {
+    "rates": 8.032,
+    "equity": 5.65,
+    "energy": 2.394,
+    "ags": 1.417,
+    "metals": 0.699,
+    "fx": 0.862,
+    "total": 19.054
+   },
+   "blend": 0.702,
+   "src": "IR backfill R"
+  },
+  "FY2021": {
+   "adv": {
+    "rates": 9.2,
+    "equity": 5.517,
+    "energy": 2.188,
+    "ags": 1.362,
+    "metals": 0.548,
+    "fx": 0.799,
+    "total": 19.614
+   },
+   "blend": 0.669,
+   "src": "IR backfill R"
+  },
+  "FY2022": {
+   "adv": {
+    "rates": 10.818,
+    "equity": 7.65,
+    "energy": 2.026,
+    "ags": 1.289,
+    "metals": 0.521,
+    "fx": 0.987,
+    "total": 23.291
+   },
+   "blend": 0.643,
+   "src": "IR backfill R"
+  },
+  "FY2023": {
+   "adv": {
+    "rates": 12.517,
+    "equity": 6.698,
+    "energy": 2.118,
+    "ags": 1.508,
+    "metals": 0.599,
+    "fx": 0.954,
+    "total": 24.394
+   },
+   "blend": 0.692,
+   "src": "IR backfill R"
+  },
+  "FY2024": {
+   "adv": {
+    "rates": 13.716,
+    "equity": 6.847,
+    "energy": 2.488,
+    "ags": 1.711,
+    "metals": 0.736,
+    "fx": 1.03,
+    "total": 26.528
+   },
+   "blend": 0.692,
+   "src": "IR backfill R"
   }
  },
  "moat": {
@@ -543,69 +1531,219 @@
  },
  "price": [
   {
+   "d": "2016-03-31",
+   "px": 96.05,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2016-06-30",
+   "px": 97.4,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2016-09-30",
+   "px": 104.52,
+   "src": "R yahoo qtr close"
+  },
+  {
    "d": "2016-12-31",
-   "px": 115.3,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 115.35,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2017-03-31",
+   "px": 118.8,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2017-06-30",
+   "px": 125.24,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2017-09-30",
+   "px": 135.68,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2017-12-31",
-   "px": 146.1,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 146.05,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2018-03-31",
+   "px": 161.74,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2018-06-30",
+   "px": 163.92,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2018-09-30",
+   "px": 170.21,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2018-12-31",
-   "px": 188.1,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 188.12,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2019-03-31",
+   "px": 164.58,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2019-06-30",
+   "px": 194.11,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2019-09-30",
+   "px": 211.34,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2019-12-31",
-   "px": 200.7,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 200.72,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2020-03-31",
+   "px": 172.91,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2020-06-30",
+   "px": 162.54,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2020-09-30",
+   "px": 167.31,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2020-12-31",
-   "px": 182.1,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 182.05,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2021-03-31",
+   "px": 204.23,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2021-06-30",
+   "px": 212.68,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2021-09-30",
+   "px": 193.38,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2021-12-31",
-   "px": 228.5,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 228.46,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2022-03-31",
+   "px": 237.86,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2022-06-30",
+   "px": 204.7,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2022-09-30",
+   "px": 177.13,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2022-12-31",
-   "px": 168.2,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "px": 168.16,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2023-03-31",
+   "px": 191.52,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2023-06-30",
+   "px": 185.29,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2023-09-30",
+   "px": 200.22,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2023-12-31",
    "px": 210.6,
-   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2024-03-31",
+   "px": 215.29,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2024-06-30",
+   "px": 196.6,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2024-09-30",
+   "px": 220.65,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2024-12-31",
-   "px": 232.0,
-   "src": "E ~actual"
+   "px": 232.23,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2025-03-31",
+   "px": 265.29,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2025-06-30",
+   "px": 275.62,
+   "src": "R yahoo qtr close"
+  },
+  {
+   "d": "2025-09-30",
+   "px": 270.19,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2025-12-31",
-   "px": 268.0,
-   "src": "E approx"
+   "px": 273.08,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2026-03-31",
-   "px": 305.0,
-   "src": "E approx"
+   "px": 295.35,
+   "src": "R yahoo qtr close"
   },
   {
    "d": "2026-06-30",
-   "px": 247.0,
-   "src": "E approx"
+   "px": 220.83,
+   "src": "R yahoo qtr close"
   },
   {
-   "d": "2026-07-24",
-   "px": 242.26,
-   "src": "R-aggregator post-Q2"
+   "d": "2026-07-27",
+   "px": 255.36,
+   "src": "yahoo daily close R"
   }
  ],
  "tripwires": [
@@ -671,5 +1809,262 @@
   "2025": 223.4,
   "2026": 220
  },
- "amort_src": "purchased-intangible amortization, annual (marketbeat/10-Ks); /4 for quarterly approx"
+ "amort_src": "purchased-intangible amortization, annual (marketbeat/10-Ks); /4 for quarterly approx",
+ "macro": {
+  "ust_issuance_q": [
+   {
+    "p": "2016Q1",
+    "gross_b": 2157.2,
+    "coupon_b": 578.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2016Q2",
+    "gross_b": 1907.6,
+    "coupon_b": 591.6,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2016Q3",
+    "gross_b": 2137.0,
+    "coupon_b": 548.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2016Q4",
+    "gross_b": 2198.4,
+    "coupon_b": 551.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2017Q1",
+    "gross_b": 2142.4,
+    "coupon_b": 554.4,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2017Q2",
+    "gross_b": 2231.8,
+    "coupon_b": 570.8,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2017Q3",
+    "gross_b": 2150.9,
+    "coupon_b": 562.9,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2017Q4",
+    "gross_b": 2262.1,
+    "coupon_b": 536.1,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2018Q1",
+    "gross_b": 2625.8,
+    "coupon_b": 608.8,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2018Q2",
+    "gross_b": 2444.7,
+    "coupon_b": 646.7,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2018Q3",
+    "gross_b": 2628.4,
+    "coupon_b": 648.4,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2018Q4",
+    "gross_b": 2863.3,
+    "coupon_b": 681.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2019Q1",
+    "gross_b": 2968.1,
+    "coupon_b": 693.1,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2019Q2",
+    "gross_b": 2853.0,
+    "coupon_b": 729.9,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2019Q3",
+    "gross_b": 3090.0,
+    "coupon_b": 757.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2019Q4",
+    "gross_b": 3093.2,
+    "coupon_b": 755.5,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2020Q1",
+    "gross_b": 3391.6,
+    "coupon_b": 758.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2020Q2",
+    "gross_b": 6989.4,
+    "coupon_b": 898.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2020Q3",
+    "gross_b": 5248.9,
+    "coupon_b": 1066.1,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2020Q4",
+    "gross_b": 5342.9,
+    "coupon_b": 1173.4,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2021Q1",
+    "gross_b": 4973.7,
+    "coupon_b": 1289.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2021Q2",
+    "gross_b": 5145.9,
+    "coupon_b": 1336.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2021Q3",
+    "gross_b": 4576.5,
+    "coupon_b": 1273.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2021Q4",
+    "gross_b": 4825.1,
+    "coupon_b": 1240.7,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2022Q1",
+    "gross_b": 4499.0,
+    "coupon_b": 1150.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2022Q2",
+    "gross_b": 3829.3,
+    "coupon_b": 1041.5,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2022Q3",
+    "gross_b": 4196.0,
+    "coupon_b": 919.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2022Q4",
+    "gross_b": 4329.5,
+    "coupon_b": 848.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2023Q1",
+    "gross_b": 4815.8,
+    "coupon_b": 854.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2023Q2",
+    "gross_b": 5011.7,
+    "coupon_b": 873.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2023Q3",
+    "gross_b": 6011.6,
+    "coupon_b": 880.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2023Q4",
+    "gross_b": 6988.1,
+    "coupon_b": 946.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2024Q1",
+    "gross_b": 7252.6,
+    "coupon_b": 1041.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2024Q2",
+    "gross_b": 6782.3,
+    "coupon_b": 1144.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2024Q3",
+    "gross_b": 7419.1,
+    "coupon_b": 1162.0,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2024Q4",
+    "gross_b": 7734.9,
+    "coupon_b": 1155.8,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2025Q1",
+    "gross_b": 7448.6,
+    "coupon_b": 1193.3,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2025Q2",
+    "gross_b": 7129.4,
+    "coupon_b": 1238.4,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2025Q3",
+    "gross_b": 7832.8,
+    "coupon_b": 1197.2,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2025Q4",
+    "gross_b": 8335.2,
+    "coupon_b": 1191.4,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2026Q1",
+    "gross_b": 7916.3,
+    "coupon_b": 1221.1,
+    "src": "R fiscaldata auctions"
+   },
+   {
+    "p": "2026Q2",
+    "gross_b": 7840.9,
+    "coupon_b": 1251.8,
+    "src": "R fiscaldata auctions"
+   }
+  ],
+  "ust_src": "Treasury FiscalData auctions_query API; coupon = notes+bonds+TIPS+FRN gross accepted"
+ }
 }
