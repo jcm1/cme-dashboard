@@ -1465,8 +1465,141 @@
    }
   ],
   "oi_by_class": {
-   "note": "populates from next monthly volume release via updater",
-   "series": []
+   "note": "quarter-end R backfill 2022Q4->2026Q2 (2025Q2-Q4 not disclosed); monthly points append via add-month --oi",
+   "series": [
+    {
+     "p": "2022Q4",
+     "rates": 66.482,
+     "equity": 8.177,
+     "energy": 11.762,
+     "ags": 6.333,
+     "metals": 1.745,
+     "fx": 2.658,
+     "total": 97.157,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2023Q1",
+     "rates": 81.135,
+     "equity": 9.593,
+     "energy": 13.398,
+     "ags": 7.787,
+     "metals": 2.13,
+     "fx": 2.81,
+     "total": 116.854,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2023Q2",
+     "rates": 68.309,
+     "equity": 9.866,
+     "energy": 13.223,
+     "ags": 8.034,
+     "metals": 1.999,
+     "fx": 2.79,
+     "total": 104.221,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2023Q3",
+     "rates": 72.322,
+     "equity": 10.183,
+     "energy": 12.729,
+     "ags": 8.245,
+     "metals": 2.103,
+     "fx": 2.846,
+     "total": 108.428,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2023Q4",
+     "rates": 70.164,
+     "equity": 10.114,
+     "energy": 12.99,
+     "ags": 7.112,
+     "metals": 2.065,
+     "fx": 2.602,
+     "total": 105.047,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2024Q1",
+     "rates": 71.959,
+     "equity": 10.907,
+     "energy": 14.607,
+     "ags": 9.077,
+     "metals": 2.532,
+     "fx": 2.973,
+     "total": 112.054,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2024Q2",
+     "rates": 71.064,
+     "equity": 10.834,
+     "energy": 15.101,
+     "ags": 8.563,
+     "metals": 2.575,
+     "fx": 3.044,
+     "total": 111.181,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2024Q3",
+     "rates": 78.898,
+     "equity": 11.27,
+     "energy": 14.29,
+     "ags": 8.757,
+     "metals": 2.767,
+     "fx": 2.869,
+     "total": 118.852,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2024Q4",
+     "rates": 68.791,
+     "equity": 10.209,
+     "energy": 14.556,
+     "ags": 8.952,
+     "metals": 2.223,
+     "fx": 2.926,
+     "total": 107.656,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2025Q1",
+     "rates": 75.553,
+     "equity": 10.447,
+     "energy": 16.218,
+     "ags": 10.365,
+     "metals": 2.524,
+     "fx": 3.211,
+     "total": 118.318,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2026Q1",
+     "rates": 85.748,
+     "equity": 10.662,
+     "energy": 17.386,
+     "ags": 11.17,
+     "metals": 2.338,
+     "fx": 3.454,
+     "total": 130.758,
+     "src": "R volume releases (verified)"
+    },
+    {
+     "p": "2026Q2",
+     "rates": 84.275,
+     "equity": 10.761,
+     "energy": 16.226,
+     "ags": 10.286,
+     "metals": 2.211,
+     "fx": 3.703,
+     "total": 127.461,
+     "src": "R volume releases (verified)"
+    }
+   ]
   }
  },
  "capital": {
@@ -2066,5 +2199,555 @@
    }
   ],
   "ust_src": "Treasury FiscalData auctions_query API; coupon = notes+bonds+TIPS+FRN gross accepted"
- }
+ },
+ "rev_breakdown": [
+  {
+   "p": "2016Q1",
+   "fees": 796.1,
+   "md": 102.4,
+   "other": 35.7,
+   "total": 934.2,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2016Q2",
+   "fees": 767.6,
+   "md": 102.9,
+   "other": 35.9,
+   "total": 906.4,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2016Q3",
+   "fees": 704.2,
+   "md": 101.1,
+   "other": 36.4,
+   "total": 841.7,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2016Q4",
+   "fees": 768.5,
+   "md": 100.1,
+   "other": 44.3,
+   "total": 912.9,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2017Q1",
+   "fees": 792,
+   "md": 96.8,
+   "other": 40.5,
+   "total": 929.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2017Q2",
+   "fees": 792,
+   "md": 96.1,
+   "other": 36.5,
+   "total": 924.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2017Q3",
+   "fees": 756.2,
+   "md": 96.9,
+   "other": 37.7,
+   "total": 890.8,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2017Q4",
+   "fees": 758.4,
+   "md": 102,
+   "other": 39.6,
+   "total": 900,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2018Q1",
+   "fees": 973.6,
+   "md": 94.9,
+   "other": 40.5,
+   "total": 1109,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2018Q2",
+   "fees": 906.1,
+   "md": 113.8,
+   "other": 39.7,
+   "total": 1059.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2018Q3",
+   "fees": 752.5,
+   "md": 110.7,
+   "other": 41,
+   "total": 904.2,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2018Q4",
+   "fees": 1034.8,
+   "md": 130.2,
+   "other": 71.6,
+   "total": 1236.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2019Q1",
+   "fees": 952.6,
+   "md": 130.1,
+   "other": 96.9,
+   "total": 1179.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2019Q2",
+   "fees": 1051.8,
+   "md": 128.3,
+   "other": 92.6,
+   "total": 1272.7,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2019Q3",
+   "fees": 1040.7,
+   "md": 129.8,
+   "other": 106.8,
+   "total": 1277.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2019Q4",
+   "fees": 901,
+   "md": 130.3,
+   "other": 107.1,
+   "total": 1138.4,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2020Q1",
+   "fees": 1278.8,
+   "md": 131.5,
+   "other": 111.8,
+   "total": 1522.1,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2020Q2",
+   "fees": 940.2,
+   "md": 134.7,
+   "other": 107.4,
+   "total": 1182.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2020Q3",
+   "fees": 835.4,
+   "md": 139.4,
+   "other": 105.9,
+   "total": 1080.7,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2020Q4",
+   "fees": 843,
+   "md": 139.8,
+   "other": 115.7,
+   "total": 1098.5,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2021Q1",
+   "fees": 1007,
+   "md": 144.2,
+   "other": 102.1,
+   "total": 1253.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2021Q2",
+   "fees": 929.9,
+   "md": 145.2,
+   "other": 104.1,
+   "total": 1179.2,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2021Q3",
+   "fees": 878.9,
+   "md": 145.4,
+   "other": 85.6,
+   "total": 1109.9,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2021Q4",
+   "fees": 949.3,
+   "md": 142.1,
+   "other": 55.9,
+   "total": 1147.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2022Q1",
+   "fees": 1138.1,
+   "md": 151.7,
+   "other": 56.8,
+   "total": 1346.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2022Q2",
+   "fees": 1024.6,
+   "md": 151.7,
+   "other": 60.9,
+   "total": 1237.2,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2022Q3",
+   "fees": 998.6,
+   "md": 154.3,
+   "other": 74.9,
+   "total": 1227.8,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2022Q4",
+   "fees": 981.4,
+   "md": 153.2,
+   "other": 73.2,
+   "total": 1207.8,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2023Q1",
+   "fees": 1200.2,
+   "md": 165.8,
+   "other": 75.6,
+   "total": 1441.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2023Q2",
+   "fees": 1118.3,
+   "md": 163.1,
+   "other": 78.8,
+   "total": 1360.2,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2023Q3",
+   "fees": 1085.5,
+   "md": 167.6,
+   "other": 84.7,
+   "total": 1337.8,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2023Q4",
+   "fees": 1184.5,
+   "md": 167.2,
+   "other": 87.6,
+   "total": 1439.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2024Q1",
+   "fees": 1208.9,
+   "md": 175.4,
+   "other": 103.6,
+   "total": 1487.9,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2024Q2",
+   "fees": 1249.9,
+   "md": 175,
+   "other": 107.6,
+   "total": 1532.5,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2024Q3",
+   "fees": 1297.1,
+   "md": 178.2,
+   "other": 109.1,
+   "total": 1584.4,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2024Q4",
+   "fees": 1232.3,
+   "md": 181.6,
+   "other": 111.4,
+   "total": 1525.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2025Q1",
+   "fees": 1337.3,
+   "md": 194.5,
+   "other": 110.5,
+   "total": 1642.3,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2025Q2",
+   "fees": 1388,
+   "md": 198.1,
+   "other": 105.9,
+   "total": 1692,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2025Q3",
+   "fees": 1227.9,
+   "md": 202.5,
+   "other": 107.2,
+   "total": 1537.6,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2025Q4",
+   "fees": 1327.9,
+   "md": 208,
+   "other": 112.8,
+   "total": 1648.7,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2026Q1",
+   "fees": 1542.6,
+   "md": 224.1,
+   "other": 113.4,
+   "total": 1880.1,
+   "src": "R release income stmt (verified)"
+  },
+  {
+   "p": "2026Q2",
+   "fees": 1352.5,
+   "md": 238.1,
+   "other": 115.6,
+   "total": 1706.2,
+   "src": "R release income stmt (verified)"
+  }
+ ],
+ "adj_eps": [
+  {
+   "p": "2016Q1",
+   "v": 1.15,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2016Q2",
+   "v": 1.14,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2016Q3",
+   "v": 1.05,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2016Q4",
+   "v": 1.14,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2017Q1",
+   "v": 1.22,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2017Q2",
+   "v": 1.23,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2017Q3",
+   "v": 1.19,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2017Q4",
+   "v": 1.12,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2018Q1",
+   "v": 1.86,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2018Q2",
+   "v": 1.74,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2018Q3",
+   "v": 1.45,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2018Q4",
+   "v": 1.77,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2019Q1",
+   "v": 1.62,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2019Q2",
+   "v": 1.76,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2019Q3",
+   "v": 1.9,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2019Q4",
+   "v": 1.52,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2020Q1",
+   "v": 2.33,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2020Q2",
+   "v": 1.63,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2020Q3",
+   "v": 1.38,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2020Q4",
+   "v": 1.39,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2021Q1",
+   "v": 1.79,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2021Q2",
+   "v": 1.64,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2021Q3",
+   "v": 1.6,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2021Q4",
+   "v": 1.66,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2022Q1",
+   "v": 2.11,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2022Q2",
+   "v": 1.97,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2022Q3",
+   "v": 1.98,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2022Q4",
+   "v": 1.92,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2023Q1",
+   "v": 2.42,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2023Q2",
+   "v": 2.3,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2023Q3",
+   "v": 2.25,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2023Q4",
+   "v": 2.37,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2024Q1",
+   "v": 2.5,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2024Q2",
+   "v": 2.56,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2024Q3",
+   "v": 2.68,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2024Q4",
+   "v": 2.52,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2025Q1",
+   "v": 2.8,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2025Q2",
+   "v": 2.96,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2025Q3",
+   "v": 2.68,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2025Q4",
+   "v": 2.77,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2026Q1",
+   "v": 3.36,
+   "src": "R release non-GAAP recon (verified)"
+  },
+  {
+   "p": "2026Q2",
+   "v": 2.99,
+   "src": "R release non-GAAP recon (verified)"
+  }
+ ]
 }

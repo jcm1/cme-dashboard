@@ -7,6 +7,7 @@ Commands:
   add-month  --period 2026-07 --adv-total 30.1 [--adv rates=15.0,equity=8.1,...] [--oi rates=xx,...]
   add-quarter --period 2026Q3 --rev 1680 [--adj-opex 525] [--blend 0.67] [--rpc rates=0.46,...]
              [--buybacks 400] [--savings 97] [--perf-bonds 168] [--price 2026-09-30=255]
+             [--fees 1390 --md 240] [--adj-eps 3.05] [--oi rates=84.3,equity=10.2,...]  (P8-P12 series)
   set --path capital.reg_div_ps.2027 --value 5.6     surgical edit
 Every mutation appends to data/audit_log.jsonl with timestamp + args. Run rebuild after edits.
 GitHub Pages flow: commit data/ + index.html; the URL is always current."""
@@ -66,6 +67,15 @@ def add_quarter(a):
     if a.perf_bonds: d["moat"]["perf_bonds_b"].append({"p":a.period,"v":a.perf_bonds,"src":"R"})
     if a.price:
         dt,px = a.price.split("="); d["price"].append({"d":dt,"px":float(px),"src":"R/aggregator"})
+    if a.fees is not None and a.md is not None and a.rev is not None:
+        d["rev_breakdown"] = [x for x in d.get("rev_breakdown",[]) if x["p"]!=a.period]
+        d["rev_breakdown"].append({"p":a.period,"fees":a.fees,"md":a.md,"other":round(a.rev-a.fees-a.md,1),"total":a.rev,"src":"release R"})
+    if a.adj_eps is not None:
+        d["adj_eps"] = [x for x in d.get("adj_eps",[]) if x["p"]!=a.period]
+        d["adj_eps"].append({"p":a.period,"v":a.adj_eps,"src":"release R"})
+    if a.oi:
+        s = d["moat"]["oi_by_class"]["series"]
+        d["moat"]["oi_by_class"]["series"] = [x for x in s if x["p"]!=a.period]+[{"p":a.period,**kv(a.oi),"src":"release R"}]
     if a.adv_q: 
         d["adv_total"] = [x for x in d["adv_total"] if x["p"]!=a.period]
         d["adv_total"].append({"p":a.period,"adv":a.adv_q,"src":"R"})
@@ -85,9 +95,9 @@ sub = p.add_subparsers(dest="cmd", required=True)
 sub.add_parser("rebuild")
 m = sub.add_parser("add-month"); m.add_argument("--period",required=True); m.add_argument("--adv-total",type=float,dest="adv_total"); m.add_argument("--oi")
 q = sub.add_parser("add-quarter"); q.add_argument("--period",required=True)
-for arg,typ in [("--rev",float),("--opex-g",float),("--adj-opex",float),("--blend",float),("--buybacks",float),("--savings",float),("--perf-bonds",float),("--adv-q",float)]:
+for arg,typ in [("--rev",float),("--opex-g",float),("--adj-opex",float),("--blend",float),("--buybacks",float),("--savings",float),("--perf-bonds",float),("--adv-q",float),("--fees",float),("--md",float),("--adj-eps",float)]:
     q.add_argument(arg,type=typ,dest=arg[2:].replace("-","_"),default=None)
-q.add_argument("--rpc"); q.add_argument("--adv"); q.add_argument("--price")
+q.add_argument("--rpc"); q.add_argument("--adv"); q.add_argument("--price"); q.add_argument("--oi")
 s = sub.add_parser("set"); s.add_argument("--path",required=True); s.add_argument("--value",required=True)
 a = p.parse_args()
 {"rebuild":lambda x:rebuild(),"add-month":add_month,"add-quarter":add_quarter,"set":set_path}[a.cmd](a)

@@ -1,7 +1,8 @@
-# Backfill manifest — gaps the updater is ready to fill
-1. **By-line ADV & RPC quarterly, 2016–2025** — from CME quarterly earnings releases (RPC table). Unlocks the stacked by-line views in P1/P2. `add-quarter --period 2021Q1 --rpc rates=0.46,... --adv rates=12.1,...`
-2. **Quarterly prices pre-2024** — fastest: Bloomberg `BDH CME US Equity PX_LAST` quarterly export, paste via `set`. Upgrades P6's yield line to quarterly.
-3. **OI by asset class** — starts with the next monthly volume release (`add-month --oi ...`); no clean historical seed attempted.
-4. **GAAP opex 2025Q3–2026Q2** — from 10-Qs as filed (Q2'26 10-Q ~Aug 6).
-5. **Adjusted expenses quarterly pre-2026** — from release reconciliation tables.
-6. **Verify flags**: FY16–20 & FY23–24 total ADV [E]; pre-2021 regular / pre-2020 variable dividend rates [E]; FY25 buyback quarterly split (placed Q4); **Q1'26 GAAP revenue: release-derived $1,754M vs aggregator $1,880M — resolve at 10-Q**.
+# Backfill manifest — remaining gaps
+
+*Updated 2026-07-27 after the two IR-scrape workflows (see `audit_log.jsonl` actions `backfill-ir-scrape` / `-2`). Resolved and removed: by-line ADV & RPC quarterly 2016→2026Q2 (verified vs SEC filings); quarterly prices 2016→ (Yahoo closes R); GAAP opex 2025Q3–2026Q2 (10-Qs); adjusted expenses 2023Q1→ (release reconciliations); FY16–24 total-ADV [E] flags; Q1'26 revenue discrepancy (resolved: $1,880.1M per 10-Q); revenue breakdown + adjusted EPS 2016→ (42 qtrs); OI by class quarter-ends 2022Q4→.*
+
+1. **OI by asset class, 2025Q2–Q4** — CME's releases for those periods carry ADV only; period-end OI not disclosed. Series runs 2022Q4→2026Q2 with that hole; monthly points append via `add-month --oi`.
+2. **Adjusted expenses pre-2023** — CME published no adjusted-expenses subtotal before 2023; P3 approximates as GAAP less amortization/4 (D). By design, not fillable.
+3. **Pre-2021 regular / pre-2020 variable dividend rates [E]** — verify against CME's dividend history page or old 10-Ks.
+4. **FY25 buyback quarterly split** — full-year figure placed in Q4; refine if disclosed.
