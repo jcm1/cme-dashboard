@@ -1,0 +1,42 @@
+name: daily-price
+# Refreshes data/price_live.json with CME's latest close each weekday evening (after US close).
+# The dashboard banner reads this file; a Pages redeploy is triggered by the commit.
+on:
+  schedule:
+    - cron: "45 21 * * 1-5"   # 21:45 UTC ~ 4:45-5:45pm ET depending on DST
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  price:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch latest CME close
+        run: |
+          python3 - <<'EOF'
+          import json, datetime, urllib.request, sys
+          req = urllib.request.Request(
+              "https://query1.finance.yahoo.com/v8/finance/chart/CME?interval=1d&range=5d",
+              headers={"User-Agent": "Mozilla/5.0"})
+          try:
+              j = json.load(urllib.request.urlopen(req, timeout=30))
+          except Exception as e:
+              print(f"fetch failed, leaving price_live.json untouched: {e}"); sys.exit(0)
+          r = j["chart"]["result"][0]; m = r["meta"]
+          closes = [c for c in r["indicators"]["quote"][0]["close"] if c]
+          prev = closes[-2] if len(closes) > 1 else None
+          out = {"px": round(m["regularMarketPrice"], 2),
+                 "date": datetime.datetime.utcfromtimestamp(m["regularMarketTime"]).date().isoformat(),
+                 "prev": round(prev, 2) if prev else None,
+                 "chg": round((m["regularMarketPrice"]/prev - 1) * 100, 2) if prev else None,
+                 "src": "yahoo daily close R"}
+          json.dump(out, open("data/price_live.json", "w"), indent=1)
+          print(out)
+          EOF
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/price_live.json
+          git diff --cached --quiet || { git commit -m "price: daily close refresh"; git push; }

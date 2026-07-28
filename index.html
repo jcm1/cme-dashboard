@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CME KPI Dashboard · NGM</title>
+<title>CME KPI Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root{--paper:#F7F8F6;--card:#FFF;--ink:#15212E;--navy:#1F4E79;--navy2:#3E689A;--ice:#DCE7F2;--pale:#EEF3F8;--amber:#C9930A;--amberink:#8F6A07;--green:#2F7A4D;--red:#A63A3A;--gray:#5B6B7A;--line:#D8E0E8;--mono:"SF Mono","Cascadia Code",Consolas,ui-monospace,monospace}
@@ -35,7 +35,7 @@ footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px
 </head>
 <body>
 <header>
-<h1>CME GROUP · KPI DASHBOARD · NGM INTERNAL</h1>
+<h1>CME GROUP · KPI DASHBOARD</h1>
 <div class="sub"><span>DATA THROUGH <b id="h_thru"></b></span><span>NEXT: <b id="h_next"></b></span><span>PRICE <b id="h_px"></b></span><span>SOURCE TAGS: R REPORTED · D DERIVED · E ESTIMATE</span><span>UPDATED VIA update/update_dashboard.py · GIT HISTORY = AUDIT TRAIL</span></div>
 </header>
 <main>
@@ -44,12 +44,12 @@ footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px
 <div class="panel wide"><div class="ph"><div class="t">P3 · Revenue vs expenses vs margin — the operating-leverage machine</div><div class="c">QUARTERLY · 2016→ · ADJ + WEDGE = GAAP</div></div>
 <div class="chartbox" style="height:270px"><canvas id="c3"></canvas></div>
 <div class="chips" id="chips3"></div>
-<div class="note">Opex bar = adjusted (bottom) + typical adjustments (amortization of purchased intangibles plus one-times, amber) = GAAP total. Pre-2025 adjusted approximated as GAAP less amortization/4 (D); refine per release via the updater. Margin line = adjusted basis; the amber wedge fattening in 2019 IS the NEX digestion.</div></div>
+<div class="note">Opex bar = adjusted (bottom) + typical adjustments (amortization of purchased intangibles plus one-times, amber) = GAAP total. Adjusted opex is reported (R, from release non-GAAP reconciliations) where available; remaining quarters approximated as GAAP less amortization/4 (D). Margin line = adjusted basis; the amber wedge fattening in 2019 IS the NEX digestion.</div></div>
 
-<div class="panel"><div class="ph"><div class="t">P1 · Volume engine</div><div class="c">ANNUAL FY16→ + RECENT QTRS</div></div>
+<div class="panel"><div class="ph"><div class="t">P1 · Volume engine <button class="toggle" id="advMode">FY ⇄ quarterly</button></div><div class="c">STACKED BY ASSET CLASS</div></div>
 <div class="chartbox"><canvas id="c1"></canvas></div>
 <div class="chips" id="chips1"></div>
-<div class="note">By-line stacked view activates as the quarterly by-line backfill lands (updater ready; manifest item 1).</div></div>
+<div class="note">Each bar = total ADV stacked by asset class (colors match P2). FY view: annual averages plus current-year quarters; toggle for the full quarterly series.</div></div>
 
 <div class="panel"><div class="ph"><div class="t">P2 · Pricing (RPC) <button class="toggle" id="rpcMode">tiles ⇄ overlay</button></div><div class="c">QUARTERLY · NOT STACKABLE</div></div>
 <div class="chartbox"><canvas id="c2"></canvas></div>
@@ -70,7 +70,7 @@ footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px
 <div class="panel"><div class="ph"><div class="t">P6 · Price &amp; shareholder yield</div><div class="c">TTM YIELD = (DIV + BUYBACKS) / MKT CAP</div></div>
 <div class="chartbox"><canvas id="c6"></canvas></div>
 <div class="chips" id="chips6"></div>
-<div class="note">Trailing-twelve-month, paid basis, so the annual variable doesn't sawtooth the line. Pre-2024 prices are year-end actuals [E — BDH export upgrades to quarterly in one paste].</div></div>
+<div class="note">Trailing-twelve-month, paid basis, so the annual variable doesn't sawtooth the line. Prices are quarter-end closes (R, Yahoo) through the latest quarter; the banner price refreshes daily via GitHub Action and live when the page can reach a quote.</div></div>
 
 <div class="panel wide"><div class="ph"><div class="t">P7 · Tripwire strip — the §8 signposts, live</div><div class="c">CLICK A CHIP</div></div>
 <div class="chips" id="twchips"></div>
@@ -92,7 +92,20 @@ const M=DATA.meta;
 $("h_thru").textContent=M.through.monthly+" / "+M.through.quarterly;
 $("h_next").textContent="vol "+M.next_updates.volume_release+" · Q3 "+M.next_updates.q3_earnings;
 const lastPx=DATA.price[DATA.price.length-1];
-$("h_px").textContent="$"+lastPx.px.toFixed(2)+" ("+lastPx.d+")";
+const fmtPx=(px,tag)=>"$"+(+px).toFixed(2)+" "+tag;
+$("h_px").textContent=fmtPx(lastPx.px,"("+lastPx.d+")");
+/* live price: served data/price_live.json (refreshed daily by GitHub Action), then a true live quote if reachable */
+(async()=>{
+ try{const r=await fetch("data/price_live.json",{cache:"no-store"});
+  if(r.ok){const j=await r.json();
+   if(j&&j.px)$("h_px").textContent=fmtPx(j.px,"CLOSE "+j.date+(j.chg!=null?" · "+(j.chg>=0?"+":"")+j.chg.toFixed(2)+"%":""));}
+ }catch(e){/* file:// open — keep embedded */}
+ try{const u="https://api.allorigins.win/raw?url="+encodeURIComponent("https://query1.finance.yahoo.com/v8/finance/chart/CME?interval=1d&range=1d");
+  const j=await(await fetch(u)).json();const m=j.chart.result[0].meta;
+  if(m&&m.regularMarketPrice){const chg=m.chartPreviousClose?(m.regularMarketPrice/m.chartPreviousClose-1)*100:null;
+   $("h_px").textContent=fmtPx(m.regularMarketPrice,"LIVE"+(chg!=null?" · "+(chg>=0?"+":"")+chg.toFixed(2)+"%":""));}
+ }catch(e){/* proxy down — daily close stands */}
+})();
 
 /* P3 revenue vs expenses vs margin */
 (()=>{const q=DATA.quarterly_fin;
@@ -108,18 +121,49 @@ new Chart($("c3"),{data:{labels,datasets:[
 options:{responsive:true,maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
 scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"$M"}},y2:{position:"right",min:50,max:75,grid:{display:false},ticks:{callback:v=>v+"%"}}}}});
 const latest=q[q.length-1];
-$("chips3").innerHTML=`<span class="chip">Q2'26 rev <b>$${latest.rev}M</b> R</span><span class="chip">Q2'26 adj margin <b>${(latest.adj_opinc/latest.rev*100).toFixed(1)}%</b> D</span><span class="chip">FY25 adj expenses <b>$1,995.8M</b> R · incrementals <b>~87%</b></span><span class="chip">wedge ≈ $55–75M/qtr, mostly NEX/CBOT amortization</span>`;})();
+const nAdjR=q.filter(x=>x.adj_opex!=null).length;
+$("chips3").innerHTML=`<span class="chip">${latest.p} rev <b>$${latest.rev}M</b> R</span><span class="chip">${latest.p} adj margin <b>${(latest.adj_opinc/latest.rev*100).toFixed(1)}%</b></span><span class="chip">FY25 adj expenses <b>$1,995.8M</b> R · incrementals <b>~87%</b></span><span class="chip">reported adj opex: <b>${nAdjR} qtrs</b></span><span class="chip">wedge ≈ $55–75M/qtr, mostly NEX/CBOT amortization</span>`;})();
 
-/* P1 volume */
-(()=>{const a=DATA.adv_total;
-new Chart($("c1"),{data:{labels:a.map(x=>x.p),datasets:[
-{type:"bar",label:"Total ADV (M/day)",data:a.map(x=>x.adv),backgroundColor:a.map(x=>x.p.startsWith("FY")?NAVY:AMBER)}]},
-options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:"M contracts/day"}}}}});
-const b26=DATA.byline["2026Q2"];
-$("chips1").innerHTML=`<span class="chip">Q2'26 <b>29.8M</b> R · 3rd-best qtr</span><span class="chip">Q1'26 record <b>36.2M</b> R</span><span class="chip">rates share Q2 <b>${(b26.adv.rates/29.8*100).toFixed(0)}%</b> D</span><span class="chip">amber bars = quarters · navy = FY avg</span>`;})();
+/* P1 volume — stacked by asset class, FY ⇄ quarterly */
+(()=>{const bl=DATA.byline;
+const lines=["rates","equity","energy","ags","metals","fx"];
+const cols={rates:NAVY,equity:NAVY2,energy:AMBER,ags:GREEN,metals:"#8F6A07",fx:GRAY};
+const qkeys=Object.keys(bl).filter(k=>/^\d{4}Q\d$/.test(k)&&bl[k].adv).sort();
+const fykeys=Object.keys(bl).filter(k=>/^FY\d{4}$/.test(k)&&bl[k].adv).sort();
+const flatTotals=Object.fromEntries(DATA.adv_total.map(x=>[x.p,x.adv]));
+const tot=k=>{const a=bl[k]?.adv;if(!a)return flatTotals[k]??null;
+ return a.total??+lines.reduce((s,l)=>s+(a[l]||0),0).toFixed(1);};
+let chart,mode="FY";
+function draw(){
+ const curYr=Math.max(...qkeys.map(k=>+k.slice(0,4)));
+ const keys=mode==="FY"?[...fykeys,...qkeys.filter(q=>+q.slice(0,4)===curYr)]:qkeys;
+ if(chart)chart.destroy();
+ if(fykeys.length<3&&qkeys.length<8){ /* by-line backfill absent — flat totals */
+  const a=DATA.adv_total;
+  chart=new Chart($("c1"),{data:{labels:a.map(x=>x.p),datasets:[
+  {type:"bar",label:"Total ADV (M/day)",data:a.map(x=>x.adv),backgroundColor:a.map(x=>x.p.startsWith("FY")?NAVY:AMBER)}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:"M contracts/day"}}}}});return;}
+ chart=new Chart($("c1"),{type:"bar",data:{labels:keys,datasets:
+  lines.map(l=>({label:l,data:keys.map(k=>bl[k]?.adv?.[l]??null),backgroundColor:cols[l],stack:"adv"}))},
+ options:{responsive:true,maintainAspectRatio:false,
+  plugins:{legend:{display:true,labels:{boxWidth:9,font:{size:9}}},
+   tooltip:{callbacks:{footer:items=>"total "+items.reduce((s,i)=>s+(i.raw||0),0).toFixed(1)+"M/day"}}},
+  scales:{x:{stacked:true,ticks:{maxTicksLimit:mode==="FY"?14:22}},y:{stacked:true,title:{display:true,text:"M contracts/day"}}}}});
+}
+$("advMode").onclick=function(){this.classList.toggle("on");mode=this.classList.contains("on")?"QTR":"FY";draw();};
+draw();
+const lastQ=qkeys[qkeys.length-1]||"2026Q2";
+const totals=qkeys.map(k=>[k,tot(k)]).filter(x=>x[1]!=null);
+const rec=totals.length?totals.reduce((a,b)=>b[1]>a[1]?b:a):null;
+const shr=bl[lastQ]?.adv?.rates&&tot(lastQ)?(bl[lastQ].adv.rates/tot(lastQ)*100).toFixed(0):null;
+$("chips1").innerHTML=`<span class="chip">${lastQ} <b>${tot(lastQ)??"—"}M</b>/day R</span>`+
+ (rec?`<span class="chip">record ${rec[0]} <b>${rec[1]}M</b> R</span>`:"")+
+ (shr?`<span class="chip">rates share <b>${shr}%</b> D</span>`:"")+
+ `<span class="chip">colors = asset class · matches P2</span>`;})();
 
 /* P2 RPC overlay/tiles */
-(()=>{const periods=["FY2025","2026Q1","2026Q2"];
+(()=>{const qp=Object.keys(DATA.byline).filter(k=>/^\d{4}Q\d$/.test(k)&&(DATA.byline[k].rpc||DATA.byline[k].blend)).sort();
+const periods=qp.length>=3?qp:["FY2025","2026Q1","2026Q2"];
 const lines=["rates","equity","energy","ags","metals","fx"];
 const cols={rates:NAVY,equity:NAVY2,energy:AMBER,ags:GREEN,metals:"#8F6A07",fx:GRAY};
 let chart;
@@ -128,22 +172,26 @@ if(chart)chart.destroy();
 chart=new Chart($("c2"),{type:"line",data:{labels:periods,datasets:[
 ...lines.map(l=>({label:l,data:periods.map(p=>DATA.byline[p]?.rpc?.[l]??null),borderColor:cols[l],backgroundColor:cols[l],pointRadius:3,spanGaps:true,borderWidth:1.5})),
 {label:"BLENDED",data:periods.map(p=>DATA.byline[p]?.blend??null),borderColor:"#15212E",backgroundColor:"#15212E",borderWidth:3,pointRadius:4}]},
-options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:"$/contract"}}}}});}
+options:{responsive:true,maintainAspectRatio:false,scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"$/contract"}}}}});}
 function spark(vals,color){if(vals.length<2)return '<span style="color:#9AAABB">trend pending backfill</span>';
 const w=90,hh=22,mn=Math.min(...vals),mx=Math.max(...vals),rg=(mx-mn)||1;
 const pts=vals.map((v,i)=>(i/(vals.length-1)*w).toFixed(1)+","+(hh-3-(v-mn)/rg*(hh-6)).toFixed(1)).join(" ");
 return '<svg width="'+w+'" height="'+hh+'" style="vertical-align:middle"><polyline points="'+pts+'" fill="none" stroke="'+color+'" stroke-width="2"/></svg>';}
 function tiles(){$("c2").parentElement.style.display="none";const t=$("rpcTiles");t.style.display="grid";
 t.style.gridTemplateColumns="repeat(3,1fr)";t.style.gap="7px";
-const hero=(()=>{const vals=periods.map(p=>DATA.byline[p].blend);const cur=vals[vals.length-1];const d=(cur/vals[0]-1)*100;
-return '<div style="grid-column:1/-1;border:2px solid #15212E;border-radius:9px;padding:8px 11px;display:flex;align-items:center;gap:14px;background:#EEF3F8"><div><div style="font-size:10px;color:#5B6B7A">BLENDED RPC</div><b style="font-size:17px;color:#15212E">$'+cur.toFixed(3)+'</b> <span style="color:'+(d<0?'#A63A3A':'#2F7A4D')+'">'+(d>0?'+':'')+d.toFixed(1)+'% vs FY25</span></div>'+spark(vals,"#15212E")+'<span style="font-size:10px;color:#2F7A4D">ex-mix residual POSITIVE — tripwire #2 quiet</span></div>';})();
+const hero=(()=>{const raw=periods.map(p=>DATA.byline[p]?.blend);const vals=raw.filter(v=>v!=null);const cur=vals[vals.length-1];
+const base=vals.length>4?vals[vals.length-5]:vals[0];const d=(cur/base-1)*100;const tag=vals.length>4?"% y/y":"% vs "+periods[0];
+return '<div style="grid-column:1/-1;border:2px solid #15212E;border-radius:9px;padding:8px 11px;display:flex;align-items:center;gap:14px;background:#EEF3F8"><div><div style="font-size:10px;color:#5B6B7A">BLENDED RPC · '+vals.length+'-QTR HISTORY</div><b style="font-size:17px;color:#15212E">$'+cur.toFixed(3)+'</b> <span style="color:'+(d<0?'#A63A3A':'#2F7A4D')+'">'+(d>0?'+':'')+d.toFixed(1)+tag+'</span></div>'+spark(vals,"#15212E")+'<span style="font-size:10px;color:#2F7A4D">ex-mix residual POSITIVE — tripwire #2 quiet</span></div>';})();
 t.innerHTML=hero+lines.map(l=>{const vals=periods.map(p=>DATA.byline[p]?.rpc?.[l]).filter(v=>v!=null);
 const cur=vals.length?vals[vals.length-1]:null;
-const delta=vals.length>1?((cur/vals[0]-1)*100):null;
-return '<div style="border:1px solid var(--line);border-radius:8px;padding:7px 9px"><b style="color:'+cols[l]+'">'+l+'</b><br><span style="font-size:15px;color:#15212E">'+(cur!=null?"$"+cur.toFixed(3):"—")+'</span> '+(delta!=null?'<span style="font-size:10px;color:'+(delta<0?'#A63A3A':'#2F7A4D')+'">'+(delta>0?'+':'')+delta.toFixed(1)+'%</span>':'')+'<br>'+spark(vals,cols[l])+'</div>';}).join("");}
+const base=vals.length>4?vals[vals.length-5]:vals[0];
+const delta=vals.length>1?((cur/base-1)*100):null;
+return '<div style="border:1px solid var(--line);border-radius:8px;padding:7px 9px"><b style="color:'+cols[l]+'">'+l+'</b><br><span style="font-size:15px;color:#15212E">'+(cur!=null?"$"+cur.toFixed(3):"—")+'</span> '+(delta!=null?'<span style="font-size:10px;color:'+(delta<0?'#A63A3A':'#2F7A4D')+'">'+(delta>0?'+':'')+delta.toFixed(1)+'%'+(vals.length>4?' y/y':'')+'</span>':'')+'<br>'+spark(vals,cols[l])+'</div>';}).join("");}
 $("rpcMode").onclick=function(){this.classList.toggle("on");this.classList.contains("on")?overlay():tiles();};
 this&&0;$("rpcMode").classList.remove("on");tiles();
-$("chips2").innerHTML=`<span class="chip">Q2'26 blend <b>$0.678</b> R ↑ from 0.652</span><span class="chip">ex-mix residual <b>POSITIVE</b> — tripwire #2 quiet</span><span class="chip">Apr-26 fee action landed R</span>`;})();
+const lastP=periods[periods.length-1],prevP=periods[periods.length-2];
+const lastB=DATA.byline[lastP]?.blend,prevB=DATA.byline[prevP]?.blend;
+$("chips2").innerHTML=`<span class="chip">${lastP} blend <b>$${lastB?.toFixed(3)??"—"}</b> R${prevB?" ↑ from "+prevB.toFixed(3):""}</span><span class="chip">history <b>${periods.length} qtrs</b></span><span class="chip">ex-mix residual <b>POSITIVE</b> — tripwire #2 quiet</span><span class="chip">Apr-26 fee action landed R</span>`;})();
 
 /* P4 moat gauges */
 (()=>{const s=DATA.moat.margin_savings_bpd,p=DATA.moat.perf_bonds_b;
@@ -204,7 +252,7 @@ new Chart($("c6"),{type:"line",data:{labels:px.map(p=>p.d.slice(0,7)),datasets:[
 {label:"TTM shareholder yield %",data:yieldPts,borderColor:GREEN,backgroundColor:GREEN,pointRadius:3,borderWidth:2,yAxisID:"y2"}]},
 options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:"$"}},y2:{position:"right",title:{display:true,text:"%"},min:0,max:7,grid:{display:false},ticks:{callback:v=>v+"%"}}}}});
 const lastY=yieldPts[yieldPts.length-1];
-$("chips6").innerHTML=`<span class="chip">yield now <b>${lastY.toFixed(1)}%</b> D</span><span class="chip">vs <b>5.0%</b> on FY25-basis (comps tab) — the gap IS the 2026 buyback surge showing up in trailing numbers</span><span class="chip">price −21% from Mar high while yield spiked</span><span class="chip">pre-2024 px = year-end [E]</span>`;
+$("chips6").innerHTML=`<span class="chip">yield now <b>${lastY.toFixed(1)}%</b> D</span><span class="chip">vs <b>5.0%</b> on FY25-basis (comps tab) — the gap IS the 2026 buyback surge showing up in trailing numbers</span><span class="chip">price −21% from Mar high while yield spiked</span><span class="chip">px = quarter-end closes <b>R</b> + live banner</span>`;
 window.__lastYield=lastY;})();
 
 /* P7 tripwires */
@@ -213,7 +261,7 @@ DATA.tripwires.forEach(t=>{const d=document.createElement("span");d.className="t
 d.onclick=()=>{$("twout").textContent=`${t.k} — READING: ${t.reading} · THRESHOLD: ${t.threshold} · SOURCE: ${t.src} · CHECKED: ${t.checked}`;};
 box.appendChild(d);});})();
 
-$("foot").textContent="CME KPI DASHBOARD · NGM INTERNAL · BUILT "+M.built+" · SOURCES TAGGED PER DATAPOINT IN data/cme_kpi_data.json · UPDATE: python update/update_dashboard.py --help · BACKFILL GAPS: see backfill_manifest.md · NOT INVESTMENT ADVICE";
+$("foot").textContent="CME KPI DASHBOARD · BUILT "+M.built+" · SOURCES TAGGED PER DATAPOINT IN data/cme_kpi_data.json · UPDATE: python update/update_dashboard.py --help · BACKFILL GAPS: see backfill_manifest.md · NOT INVESTMENT ADVICE";
 </script>
 </body>
 </html>

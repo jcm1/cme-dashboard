@@ -1,6 +1,9 @@
 # CME KPI Dashboard
 Self-contained `index.html` (open anywhere) rebuilt from `data/cme_kpi_data.json` by `update/update_dashboard.py`. Every datapoint carries a source tag (R reported / D derived / E estimate); every mutation logs to `data/audit_log.jsonl`; git history is the audit trail.
 
+## Price banner
+Three layers, best available wins: embedded last quarterly close → `data/price_live.json` (refreshed each weekday ~5:45pm ET by `.github/workflows/daily-price.yml`, committed by github-actions bot) → true live quote fetched client-side when the page can reach one. Quarter-end closes in `price[]` are reported (Yahoo).
+
 ## GitHub Pages setup (once)
 1. Create repo (e.g. `cme-dashboard`), copy this folder in, push.
 2. Settings → Pages → Deploy from branch → `main` / root. Dashboard lives at `https://<user>.github.io/cme-dashboard/` — always current after each push.
