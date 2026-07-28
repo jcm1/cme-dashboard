@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CME KPI Dashboard · NGM</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--paper:#F7F8F6;--card:#FFF;--ink:#15212E;--navy:#1F4E79;--navy2:#3E689A;--ice:#DCE7F2;--pale:#EEF3F8;--amber:#C9930A;--amberink:#8F6A07;--green:#2F7A4D;--red:#A63A3A;--gray:#5B6B7A;--line:#D8E0E8;--mono:"SF Mono","Cascadia Code",Consolas,ui-monospace,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:#2A3540;font-family:Georgia,serif;font-size:15px}
+header{background:var(--ink);color:#CBD8E4;padding:14px 22px;font-family:var(--mono)}
+header h1{font-size:17px;margin:0;color:#fff;letter-spacing:.03em}
+header .sub{font-size:11px;margin-top:5px;display:flex;gap:20px;flex-wrap:wrap}
+header b{color:#E8C97A}
+main{max-width:1240px;margin:0 auto;padding:18px 18px 70px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(430px,1fr));gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 15px 10px;box-shadow:0 1px 3px rgba(21,33,46,.05)}
+.panel.wide{grid-column:1/-1}
+.ph{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.ph .t{font-family:Arial,sans-serif;font-weight:700;font-size:14px;color:var(--ink)}
+.ph .c{font-family:var(--mono);font-size:10px;color:var(--gray)}
+.chartbox{position:relative;height:240px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px;font-family:var(--mono);font-size:11px}
+.chip{background:var(--pale);border:1px solid var(--line);border-radius:8px;padding:4px 9px;color:var(--ink)}
+.chip b{color:var(--navy)}
+.tw{border-radius:8px;padding:5px 10px;font-family:var(--mono);font-size:11px;cursor:pointer}
+.tw.green{background:#E8F0E8;color:var(--green);border:1px solid #C6DCC6}
+.tw.amber{background:#FBF3DF;color:var(--amberink);border:1px solid #E8D9B0}
+.tw.red{background:#F7E4E4;color:var(--red);border:1px solid #E4C0C0}
+#twout{font-family:var(--mono);font-size:11.5px;color:#2A3540;background:var(--pale);border:1px solid var(--line);border-radius:8px;padding:8px 12px;margin-top:8px;min-height:34px}
+.note{font-family:var(--mono);font-size:10px;color:var(--gray);margin-top:6px;font-style:italic}
+.toggle{font-family:var(--mono);font-size:10.5px;cursor:pointer;border:1.5px solid var(--navy);color:var(--navy);border-radius:7px;padding:3px 8px;background:#fff}
+.toggle.on{background:var(--navy);color:#fff}
+footer{font-family:var(--mono);font-size:10px;color:var(--gray);max-width:1240px;margin:24px auto 0;padding:12px 18px;border-top:1px solid var(--line);line-height:1.7}
+</style>
+</head>
+<body>
+<header>
+<h1>CME GROUP · KPI DASHBOARD · NGM INTERNAL</h1>
+<div class="sub"><span>DATA THROUGH <b id="h_thru"></b></span><span>NEXT: <b id="h_next"></b></span><span>PRICE <b id="h_px"></b></span><span>SOURCE TAGS: R REPORTED · D DERIVED · E ESTIMATE</span><span>UPDATED VIA update/update_dashboard.py · GIT HISTORY = AUDIT TRAIL</span></div>
+</header>
+<main>
+<div class="grid">
+
+<div class="panel wide"><div class="ph"><div class="t">P3 · Revenue vs expenses vs margin — the operating-leverage machine</div><div class="c">QUARTERLY · 2016→ · ADJ + WEDGE = GAAP</div></div>
+<div class="chartbox" style="height:270px"><canvas id="c3"></canvas></div>
+<div class="chips" id="chips3"></div>
+<div class="note">Opex bar = adjusted (bottom) + typical adjustments (amortization of purchased intangibles plus one-times, amber) = GAAP total. Pre-2025 adjusted approximated as GAAP less amortization/4 (D); refine per release via the updater. Margin line = adjusted basis; the amber wedge fattening in 2019 IS the NEX digestion.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P1 · Volume engine</div><div class="c">ANNUAL FY16→ + RECENT QTRS</div></div>
+<div class="chartbox"><canvas id="c1"></canvas></div>
+<div class="chips" id="chips1"></div>
+<div class="note">By-line stacked view activates as the quarterly by-line backfill lands (updater ready; manifest item 1).</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P2 · Pricing (RPC) <button class="toggle" id="rpcMode">tiles ⇄ overlay</button></div><div class="c">QUARTERLY · NOT STACKABLE</div></div>
+<div class="chartbox"><canvas id="c2"></canvas></div>
+<div id="rpcTiles" style="display:none;font-family:var(--mono);font-size:11px"></div>
+<div class="chips" id="chips2"></div>
+<div class="note">Blend is a mix meter, not a price meter — the ex-mix residual chip is tripwire #2's live reading.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P4 · Moat gauges — savings &amp; customer deposits</div><div class="c">QUARTERLY DISCLOSURES</div></div>
+<div class="chartbox"><canvas id="c4"></canvas></div>
+<div class="chips" id="chips4"></div>
+<div class="note">Margin savings = management disclosure ($/day netting benefit). Performance bonds = client collateral on B/S ("customer deposits"). OI-by-class series starts with the next monthly release.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P5 · Capital returns</div><div class="c">ANNUAL 2016–24 + ROLLING T12M 2025→ · PAID BASIS</div></div>
+<div class="chartbox"><canvas id="c5"></canvas></div>
+<div class="chips" id="chips5"></div>
+<div class="note">Annual bars through 2024, then rolling trailing-12-month from 2025 — the T12M frame smooths the January variable and shows the buyback layer compounding into the stack. Paid basis throughout.</div></div>
+
+<div class="panel"><div class="ph"><div class="t">P6 · Price &amp; shareholder yield</div><div class="c">TTM YIELD = (DIV + BUYBACKS) / MKT CAP</div></div>
+<div class="chartbox"><canvas id="c6"></canvas></div>
+<div class="chips" id="chips6"></div>
+<div class="note">Trailing-twelve-month, paid basis, so the annual variable doesn't sawtooth the line. Pre-2024 prices are year-end actuals [E — BDH export upgrades to quarterly in one paste].</div></div>
+
+<div class="panel wide"><div class="ph"><div class="t">P7 · Tripwire strip — the §8 signposts, live</div><div class="c">CLICK A CHIP</div></div>
+<div class="chips" id="twchips"></div>
+<div id="twout">Click a tripwire for its reading, threshold, source, and last-checked date.</div></div>
+
+</div>
+</main>
+<footer id="foot"></footer>
+<script>
+/*DATA_START*/
+const DATA = null;
+/*DATA_END*/
+const $=id=>document.getElementById(id);
+const NAVY="#1F4E79",NAVY2="#3E689A",ICE="#B9C9DA",AMBER="#C9930A",GREEN="#2F7A4D",RED="#A63A3A",GRAY="#8AA2B8";
+const mono={font:{family:"monospace",size:10}};
+Chart.defaults.font.family="monospace";Chart.defaults.font.size=10;
+
+const M=DATA.meta;
+$("h_thru").textContent=M.through.monthly+" / "+M.through.quarterly;
+$("h_next").textContent="vol "+M.next_updates.volume_release+" · Q3 "+M.next_updates.q3_earnings;
+const lastPx=DATA.price[DATA.price.length-1];
+$("h_px").textContent="$"+lastPx.px.toFixed(2)+" ("+lastPx.d+")";
+
+/* P3 revenue vs expenses vs margin */
+(()=>{const q=DATA.quarterly_fin;
+const labels=q.map(x=>x.p);
+const amortQ=p=>(DATA.amort_annual[p.slice(0,4)]??220)/4;
+const adjOf=x=>x.adj_opex??(x.opex_g!=null?+(x.opex_g-amortQ(x.p)).toFixed(0):null);
+const wedge=x=>{const a=adjOf(x);return (x.opex_g!=null&&a!=null)?+(x.opex_g-a).toFixed(0):null;};
+new Chart($("c3"),{data:{labels,datasets:[
+{type:"bar",label:"Revenue $M",data:q.map(x=>x.rev),backgroundColor:NAVY,order:2},
+{type:"bar",label:"Adj. opex $M",data:q.map(adjOf),backgroundColor:ICE,stack:"ox",order:2},
+{type:"bar",label:"Typical adjustments",data:q.map(wedge),backgroundColor:AMBER,stack:"ox",order:2},
+{type:"line",label:"Adj. op margin %",data:q.map(x=>{const a=adjOf(x);return a!=null&&x.rev?+((x.rev-a)/x.rev*100).toFixed(1):null;}),yAxisID:"y2",borderColor:GREEN,backgroundColor:GREEN,pointRadius:2,spanGaps:true,order:1}]},
+options:{responsive:true,maintainAspectRatio:false,interaction:{mode:"index",intersect:false},
+scales:{x:{ticks:{maxTicksLimit:14}},y:{title:{display:true,text:"$M"}},y2:{position:"right",min:50,max:75,grid:{display:false},ticks:{callback:v=>v+"%"}}}}});
+const latest=q[q.length-1];
+$("chips3").innerHTML=`<span class="chip">Q2'26 rev <b>$${latest.rev}M</b> R</span><span class="chip">Q2'26 adj margin <b>${(latest.adj_opinc/latest.rev*100).toFixed(1)}%</b> D</span><span class="chip">FY25 adj expenses <b>$1,995.8M</b> R · incrementals <b>~87%</b></span><span class="chip">wedge ≈ $55–75M/qtr, mostly NEX/CBOT amortization</span>`;})();
+
+/* P1 volume */
+(()=>{const a=DATA.adv_total;
+new Chart($("c1"),{data:{labels:a.map(x=>x.p),datasets:[
+{type:"bar",label:"Total ADV (M/day)",data:a.map(x=>x.adv),backgroundColor:a.map(x=>x.p.startsWith("FY")?NAVY:AMBER)}]},
+options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:"M contracts/day"}}}}});
+const b26=DATA.byline["2026Q2"];
+$("chips1").innerHTML=`<span class="chip">Q2'26 <b>29.8M</b> R · 3rd-best qtr</span><span class="chip">Q1'26 record <b>36.2M</b> R</span><span class="chip">rates share Q2 <b>${(b26.adv.rates/29.8*100).toFixed(0)}%</b> D</span><span class="chip">amber bars = quarters · navy = FY avg</span>`;})();
+
+/* P2 RPC overlay/tiles */
+(()=>{const periods=["FY2025","2026Q1","2026Q2"];
+const lines=["rates","equity","energy","ags","metals","fx"];
+const cols={rates:NAVY,equity:NAVY2,energy:AMBER,ags:GREEN,metals:"#8F6A07",fx:GRAY};
+let chart;
+function overlay(){$("c2").parentElement.style.display="block";$("rpcTiles").style.display="none";
+if(chart)chart.destroy();
+chart=new Chart($("c2"),{type:"line",data:{labels:periods,datasets:[
+...lines.map(l=>({label:l,data:periods.map(p=>DATA.byline[p]?.rpc?.[l]??null),borderColor:cols[l],backgroundColor:cols[l],pointRadius:3,spanGaps:true,borderWidth:1.5})),
+{label:"BLENDED",data:periods.map(p=>DATA.byline[p]?.blend??null),borderColor:"#15212E",backgroundColor:"#15212E",borderWidth:3,pointRadius:4}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:"$/contract"}}}}});}
+function spark(vals,color){if(vals.length<2)return '<span style="color:#9AAABB">trend pending backfill</span>';
+const w=90,hh=22,mn=Math.min(...vals),mx=Math.max(...vals),rg=(mx-mn)||1;
+const pts=vals.map((v,i)=>(i/(vals.length-1)*w).toFixed(1)+","+(hh-3-(v-mn)/rg*(hh-6)).toFixed(1)).join(" ");
+return '<svg width="'+w+'" height="'+hh+'" style="vertical-align:middle"><polyline points="'+pts+'" fill="none" stroke="'+color+'" stroke-width="2"/></svg>';}
+function tiles(){$("c2").parentElement.style.display="none";const t=$("rpcTiles");t.style.display="grid";
+t.style.gridTemplateColumns="repeat(3,1fr)";t.style.gap="7px";
+const hero=(()=>{const vals=periods.map(p=>DATA.byline[p].blend);const cur=vals[vals.length-1];const d=(cur/vals[0]-1)*100;
+return '<div style="grid-column:1/-1;border:2px solid #15212E;border-radius:9px;padding:8px 11px;display:flex;align-items:center;gap:14px;background:#EEF3F8"><div><div style="font-size:10px;color:#5B6B7A">BLENDED RPC</div><b style="font-size:17px;color:#15212E">$'+cur.toFixed(3)+'</b> <span style="color:'+(d<0?'#A63A3A':'#2F7A4D')+'">'+(d>0?'+':'')+d.toFixed(1)+'% vs FY25</span></div>'+spark(vals,"#15212E")+'<span style="font-size:10px;color:#2F7A4D">ex-mix residual POSITIVE — tripwire #2 quiet</span></div>';})();
+t.innerHTML=hero+lines.map(l=>{const vals=periods.map(p=>DATA.byline[p]?.rpc?.[l]).filter(v=>v!=null);
+const cur=vals.length?vals[vals.length-1]:null;
+const delta=vals.length>1?((cur/vals[0]-1)*100):null;
+return '<div style="border:1px solid var(--line);border-radius:8px;padding:7px 9px"><b style="color:'+cols[l]+'">'+l+'</b><br><span style="font-size:15px;color:#15212E">'+(cur!=null?"$"+cur.toFixed(3):"—")+'</span> '+(delta!=null?'<span style="font-size:10px;color:'+(delta<0?'#A63A3A':'#2F7A4D')+'">'+(delta>0?'+':'')+delta.toFixed(1)+'%</span>':'')+'<br>'+spark(vals,cols[l])+'</div>';}).join("");}
+$("rpcMode").onclick=function(){this.classList.toggle("on");this.classList.contains("on")?overlay():tiles();};
+this&&0;$("rpcMode").classList.remove("on");tiles();
+$("chips2").innerHTML=`<span class="chip">Q2'26 blend <b>$0.678</b> R ↑ from 0.652</span><span class="chip">ex-mix residual <b>POSITIVE</b> — tripwire #2 quiet</span><span class="chip">Apr-26 fee action landed R</span>`;})();
+
+/* P4 moat gauges */
+(()=>{const s=DATA.moat.margin_savings_bpd,p=DATA.moat.perf_bonds_b;
+const key=l=>{if(l.startsWith("FY"))return +l.slice(2)+0.5;const m=l.match(/(\d{4})Q(\d)/);return m?+m[1]+(+m[2]-1)/4+0.125:0;};
+const labels=[...new Set([...s.map(x=>x.p),...p.map(x=>x.p)])].sort((a,b)=>key(a)-key(b)).map(l=>l==="FY2025"?"FY25 avg":l);
+const canon=l=>l==="FY25 avg"?"FY2025":l;
+const get=(arr,l)=>arr.find(x=>x.p===canon(l))?.v??null;
+new Chart($("c4"),{type:"line",data:{labels,datasets:[
+{label:"Margin savings $B/day",data:labels.map(l=>get(s,l)),borderColor:GREEN,backgroundColor:GREEN,pointRadius:4,spanGaps:true},
+{label:"Performance bonds $B",data:labels.map(l=>get(p,l)),borderColor:NAVY,backgroundColor:NAVY,pointRadius:4,spanGaps:true,yAxisID:"y2"}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:"$B/day"}},y2:{position:"right",title:{display:true,text:"$B"},grid:{display:false}}}}});
+$("chips4").innerHTML=`<span class="chip">savings <b>$95B/day</b> Q2'26 R — new high</span><span class="chip">deposits <b>$165B</b> 3/31 R</span><span class="chip">savings/deposits <b>${(95/165*100).toFixed(0)}%</b> D</span>`;})();
+
+/* P5 capital returns + P6 price & yield */
+(()=>{const C=DATA.capital;const years=Object.keys(C.reg_div_ps);
+// build period list: annual 2016-2024, quarterly 2025Q1->latest
+const periods=[];
+years.filter(y=>+y<=2024).forEach(y=>periods.push({p:y,type:"A"}));
+["2025Q1","2025Q2","2025Q3","2025Q4","2026Q1","2026Q2"].forEach(q=>periods.push({p:q,type:"Q"}));
+function sharesFor(p){const y=p.slice(0,4);return C.shares_m[y]??357.5;}
+function regD(per){const y=per.p.slice(0,4);const full=C.reg_div_ps[y]*sharesFor(per.p);return per.type==="A"?full:full/4;}
+function varD(per){ // paid basis: declared prior year, paid in Q1 / in the year
+ if(per.type==="A"){const prior=String(+per.p-1);return (C.var_div_ps[prior]??0)*C.shares_m[per.p.slice(0,4)];}
+ if(per.p.endsWith("Q1")){const prior=String(+per.p.slice(0,4)-1);return (C.var_div_ps[prior]??0)*sharesFor(per.p);}
+ return 0;}
+function bb(per){if(per.type==="A")return 0;const f=C.buybacks_m.find(x=>x.p===per.p);return f?f.v:0;}
+// build quarterly component series 2024Q2..latest for TTM windows
+const qlist=["2024Q2","2024Q3","2024Q4","2025Q1","2025Q2","2025Q3","2025Q4","2026Q1","2026Q2"];
+const qc=qlist.map(p=>({p,reg:regD({p,type:"Q"}),vr:varD({p,type:"Q"}),b:bb({p,type:"Q"})}));
+const ttmAt=i=>{const w=qc.slice(Math.max(0,i-3),i+1);return {reg:w.reduce((a,x)=>a+x.reg,0),vr:w.reduce((a,x)=>a+x.vr,0),b:w.reduce((a,x)=>a+x.b,0)};};
+const ttmPeriods=periods.filter(x=>x.type==="A").map(x=>({p:x.p,reg:regD(x),vr:varD(x),b:0}));
+qc.forEach((x,i)=>{if(+x.p.slice(0,4)>=2025)ttmPeriods.push({p:x.p+" TTM",...ttmAt(i)});});
+const labels=ttmPeriods.map(x=>x.p);
+new Chart($("c5"),{type:"bar",data:{labels,datasets:[
+{label:"Regular div $M",data:ttmPeriods.map(x=>Math.round(x.reg)),backgroundColor:NAVY,stack:"s"},
+{label:"Variable div $M",data:ttmPeriods.map(x=>Math.round(x.vr)),backgroundColor:AMBER,stack:"s"},
+{label:"Buybacks $M",data:ttmPeriods.map(x=>Math.round(x.b)),backgroundColor:GREEN,stack:"s"}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{x:{stacked:true,ticks:{maxTicksLimit:13}},y:{stacked:true,title:{display:true,text:"$M · annual / trailing-12M"}}}}});
+const lastT=ttmPeriods[ttmPeriods.length-1];window.__ttmTotal=Math.round(lastT.reg+lastT.vr+lastT.b);
+$("chips5").innerHTML=`<span class="chip">latest T12M total <b>~$5.5B</b> D</span><span class="chip">FY25 dividends <b>~$3.9B</b> R</span><span class="chip">H1'26 buybacks <b>$1,231M</b> R</span><span class="chip">policy: reg = <b>50-60%</b> prior-yr cash earnings R</span>`;
+
+/* P6: price + TTM shareholder yield at each price date */
+const px=DATA.price;
+function ttmReturnAt(dateStr){const y=+dateStr.slice(0,4), m=+dateStr.slice(5,7);
+ // TTM dollars: regular = current year rate * shares (approx run-rate); variable = last paid; buybacks = trailing 4Q sum
+ const reg=(C.reg_div_ps[String(y)]??C.reg_div_ps["2026"])*(C.shares_m[String(y)]??357.5);
+ const varPaidYear = m>=1 ? String(y-1) : String(y-2);
+ const varD=(C.var_div_ps[varPaidYear]??0)*(C.shares_m[String(y)]??357.5);
+ let bbT=0;
+ C.buybacks_m.forEach(b=>{const by=+b.p.slice(0,4), bq=+b.p.slice(5,6);
+  const bEnd=new Date(by, bq*3, 0); const d=new Date(dateStr);
+  const diff=(d-bEnd)/(1000*3600*24); if(diff>=-95&&diff<365)bbT+=b.v;});
+ return reg+varD+bbT;}
+const yieldPts=px.map(pt=>{const mc=pt.px*(C.shares_m[pt.d.slice(0,4)]??357.5);
+ return +(ttmReturnAt(pt.d)/mc*100).toFixed(2);});
+new Chart($("c6"),{type:"line",data:{labels:px.map(p=>p.d.slice(0,7)),datasets:[
+{label:"Price $",data:px.map(p=>p.px),borderColor:NAVY,backgroundColor:NAVY,pointRadius:3,borderWidth:2},
+{label:"TTM shareholder yield %",data:yieldPts,borderColor:GREEN,backgroundColor:GREEN,pointRadius:3,borderWidth:2,yAxisID:"y2"}]},
+options:{responsive:true,maintainAspectRatio:false,scales:{y:{title:{display:true,text:"$"}},y2:{position:"right",title:{display:true,text:"%"},min:0,max:7,grid:{display:false},ticks:{callback:v=>v+"%"}}}}});
+const lastY=yieldPts[yieldPts.length-1];
+$("chips6").innerHTML=`<span class="chip">yield now <b>${lastY.toFixed(1)}%</b> D</span><span class="chip">vs <b>5.0%</b> on FY25-basis (comps tab) — the gap IS the 2026 buyback surge showing up in trailing numbers</span><span class="chip">price −21% from Mar high while yield spiked</span><span class="chip">pre-2024 px = year-end [E]</span>`;
+window.__lastYield=lastY;})();
+
+/* P7 tripwires */
+(()=>{const box=$("twchips");
+DATA.tripwires.forEach(t=>{const d=document.createElement("span");d.className="tw "+t.status;d.textContent=t.k;
+d.onclick=()=>{$("twout").textContent=`${t.k} — READING: ${t.reading} · THRESHOLD: ${t.threshold} · SOURCE: ${t.src} · CHECKED: ${t.checked}`;};
+box.appendChild(d);});})();
+
+$("foot").textContent="CME KPI DASHBOARD · NGM INTERNAL · BUILT "+M.built+" · SOURCES TAGGED PER DATAPOINT IN data/cme_kpi_data.json · UPDATE: python update/update_dashboard.py --help · BACKFILL GAPS: see backfill_manifest.md · NOT INVESTMENT ADVICE";
+</script>
+</body>
+</html>

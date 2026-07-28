@@ -1,0 +1,675 @@
+{
+ "meta": {
+  "built": "2026-07-27",
+  "through": {
+   "monthly": "2026-06",
+   "quarterly": "2026Q2"
+  },
+  "next_updates": {
+   "volume_release": "~2026-08-04",
+   "q3_earnings": "~2026-10-22",
+   "q2_10q": "~2026-08-06"
+  }
+ },
+ "quarterly_fin": [
+  {
+   "p": "2016Q1",
+   "rev": 934,
+   "opex_g": 360,
+   "opinc_g": 574,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2016Q2",
+   "rev": 906,
+   "opex_g": 343,
+   "opinc_g": 563,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2016Q3",
+   "rev": 841,
+   "opex_g": 316,
+   "opinc_g": 525,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2016Q4",
+   "rev": 913,
+   "opex_g": 375,
+   "opinc_g": 538,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2017Q1",
+   "rev": 929,
+   "opex_g": 328,
+   "opinc_g": 601,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2017Q2",
+   "rev": 924,
+   "opex_g": 319,
+   "opinc_g": 605,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2017Q3",
+   "rev": 891,
+   "opex_g": 323,
+   "opinc_g": 568,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2017Q4",
+   "rev": 900,
+   "opex_g": 363,
+   "opinc_g": 537,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2018Q1",
+   "rev": 1109,
+   "opex_g": 368,
+   "opinc_g": 741,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2018Q2",
+   "rev": 1060,
+   "opex_g": 393,
+   "opinc_g": 667,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2018Q3",
+   "rev": 904,
+   "opex_g": 354,
+   "opinc_g": 550,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2018Q4",
+   "rev": 1237,
+   "opex_g": 587,
+   "opinc_g": 650,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2019Q1",
+   "rev": 1180,
+   "opex_g": 549,
+   "opinc_g": 631,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2019Q2",
+   "rev": 1273,
+   "opex_g": 574,
+   "opinc_g": 699,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2019Q3",
+   "rev": 1277,
+   "opex_g": 592,
+   "opinc_g": 685,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2019Q4",
+   "rev": 1138,
+   "opex_g": 565,
+   "opinc_g": 573,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2020Q1",
+   "rev": 1522,
+   "opex_g": 562,
+   "opinc_g": 960,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2020Q2",
+   "rev": 1183,
+   "opex_g": 545,
+   "opinc_g": 638,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2020Q3",
+   "rev": 1081,
+   "opex_g": 556,
+   "opinc_g": 525,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2020Q4",
+   "rev": 1099,
+   "opex_g": 584,
+   "opinc_g": 515,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2021Q1",
+   "rev": 1253,
+   "opex_g": 528,
+   "opinc_g": 725,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2021Q2",
+   "rev": 1180,
+   "opex_g": 505,
+   "opinc_g": 675,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2021Q3",
+   "rev": 1110,
+   "opex_g": 496,
+   "opinc_g": 614,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2021Q4",
+   "rev": 1148,
+   "opex_g": 516,
+   "opinc_g": 632,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2022Q1",
+   "rev": 1347,
+   "opex_g": 488,
+   "opinc_g": 859,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2022Q2",
+   "rev": 1238,
+   "opex_g": 488,
+   "opinc_g": 750,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2022Q3",
+   "rev": 1228,
+   "opex_g": 489,
+   "opinc_g": 739,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2022Q4",
+   "rev": 1208,
+   "opex_g": 540,
+   "opinc_g": 668,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2023Q1",
+   "rev": 1442,
+   "opex_g": 528,
+   "opinc_g": 914,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2023Q2",
+   "rev": 1361,
+   "opex_g": 522,
+   "opinc_g": 839,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2023Q3",
+   "rev": 1338,
+   "opex_g": 518,
+   "opinc_g": 820,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2023Q4",
+   "rev": 1439,
+   "opex_g": 576,
+   "opinc_g": 863,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2024Q1",
+   "rev": 1488,
+   "opex_g": 528,
+   "opinc_g": 960,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2024Q2",
+   "rev": 1533,
+   "opex_g": 532,
+   "opinc_g": 1001,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2024Q3",
+   "rev": 1584,
+   "opex_g": 560,
+   "opinc_g": 1024,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2024Q4",
+   "rev": 1525,
+   "opex_g": 578,
+   "opinc_g": 947,
+   "src": "macrotrends/filings"
+  },
+  {
+   "p": "2025Q1",
+   "rev": 1642,
+   "opex_g": 534,
+   "opinc_g": 1108,
+   "src": "macrotrends/filings | adj: R (release; adj margin 71.1%)",
+   "adj_opex": 475,
+   "adj_opinc": 1167
+  },
+  {
+   "p": "2025Q2",
+   "rev": 1690,
+   "opex_g": 563,
+   "opinc_g": 1127,
+   "src": "release R / macrotrends opex | adj: E-split",
+   "adj_opex": 495,
+   "adj_opinc": 1195
+  },
+  {
+   "p": "2025Q3",
+   "rev": 1537,
+   "opex_g": 580,
+   "opinc_g": 957,
+   "src": "release-derived D; opex pending | rev D; opex E-split tying FY25 GAAP ~2,289; adj E-split tying FY25 adj 1,995.8",
+   "adj_opex": 500,
+   "adj_opinc": 1037
+  },
+  {
+   "p": "2025Q4",
+   "rev": 1652,
+   "opex_g": 612,
+   "opinc_g": 1040,
+   "src": "FY25 residual D | FY residuals D/E",
+   "adj_opex": 525.8,
+   "adj_opinc": 1126.2
+  },
+  {
+   "p": "2026Q1",
+   "rev": 1754,
+   "opex_g": null,
+   "opinc_g": null,
+   "src": "release R - aggregator shows 1880 [verify 10-Q] | adj: E (~71% adj margin)",
+   "adj_opex": 505,
+   "adj_opinc": 1249
+  },
+  {
+   "p": "2026Q2",
+   "rev": 1706,
+   "opex_g": null,
+   "opinc_g": null,
+   "adj_opex": 521.2,
+   "adj_opinc": 1184.8,
+   "src": "Q2'26 release R/D | adj: R/D"
+  }
+ ],
+ "adv_total": [
+  {
+   "p": "FY2016",
+   "adv": 15.6,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2017",
+   "adv": 16.3,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2018",
+   "adv": 19.2,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2019",
+   "adv": 19.2,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2020",
+   "adv": 19.1,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2021",
+   "adv": 19.6,
+   "src": "R"
+  },
+  {
+   "p": "FY2022",
+   "adv": 23.3,
+   "src": "R"
+  },
+  {
+   "p": "FY2023",
+   "adv": 24.4,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2024",
+   "adv": 26.5,
+   "src": "E [verify]"
+  },
+  {
+   "p": "FY2025",
+   "adv": 28.1,
+   "src": "R"
+  },
+  {
+   "p": "2025Q2",
+   "adv": 30.2,
+   "src": "R"
+  },
+  {
+   "p": "2026Q1",
+   "adv": 36.2,
+   "src": "R record"
+  },
+  {
+   "p": "2026Q2",
+   "adv": 29.8,
+   "src": "R"
+  }
+ ],
+ "byline": {
+  "FY2025": {
+   "src": "D",
+   "adv": {
+    "rates": 14.2,
+    "equity": 7.4,
+    "energy": 2.7,
+    "ags": 1.9,
+    "metals": 1.0,
+    "fx": 1.0
+   },
+   "rpc": {
+    "rates": 0.482,
+    "equity": 0.629,
+    "energy": 1.202,
+    "ags": 1.415,
+    "metals": 1.43,
+    "fx": 0.801
+   },
+   "blend": 0.696
+  },
+  "2026Q1": {
+   "src": "releases R/D",
+   "adv": {
+    "rates": 18.7,
+    "equity": 8.7,
+    "energy": 4.0,
+    "ags": 1.6,
+    "metals": 1.7,
+    "fx": 1.5
+   },
+   "rpc": {
+    "rates": 0.457,
+    "equity": 0.597
+   },
+   "blend": 0.652
+  },
+  "2026Q2": {
+   "src": "total+rates R; other lines E-split",
+   "adv": {
+    "rates": 14.5,
+    "equity": 7.9,
+    "energy": 3.3,
+    "ags": 1.65,
+    "metals": 1.3,
+    "fx": 1.15
+   },
+   "blend": 0.678
+  }
+ },
+ "moat": {
+  "margin_savings_bpd": [
+   {
+    "p": "FY2025",
+    "v": 72,
+    "src": "R avg"
+   },
+   {
+    "p": "2025Q4",
+    "v": 80,
+    "src": "R"
+   },
+   {
+    "p": "2026Q1",
+    "v": 85,
+    "src": "R"
+   },
+   {
+    "p": "2026Q2",
+    "v": 95,
+    "src": "R"
+   }
+  ],
+  "perf_bonds_b": [
+   {
+    "p": "2023Q4",
+    "v": 90,
+    "src": "E approx"
+   },
+   {
+    "p": "2025Q4",
+    "v": 159.7,
+    "src": "R"
+   },
+   {
+    "p": "2026Q1",
+    "v": 165.0,
+    "src": "R"
+   }
+  ],
+  "oi_by_class": {
+   "note": "populates from next monthly volume release via updater",
+   "series": []
+  }
+ },
+ "capital": {
+  "reg_div_ps": {
+   "2016": 2.4,
+   "2017": 2.64,
+   "2018": 2.8,
+   "2019": 3.0,
+   "2020": 3.4,
+   "2021": 3.6,
+   "2022": 4.0,
+   "2023": 4.4,
+   "2024": 4.6,
+   "2025": 5.0,
+   "2026": 5.2
+  },
+  "reg_src": "R 2021+; E pre-2021 [verify]",
+  "var_div_ps": {
+   "2016": 3.25,
+   "2017": 3.5,
+   "2018": 1.75,
+   "2019": 2.5,
+   "2020": 2.5,
+   "2021": 3.25,
+   "2022": 4.5,
+   "2023": 5.25,
+   "2024": 5.8,
+   "2025": 6.15
+  },
+  "var_src": "declared-year; paid following Jan; R 2020+; E pre-2020 [verify]",
+  "buybacks_m": [
+   {
+    "p": "2025Q4",
+    "v": 266.1,
+    "src": "FY25 10-K R (split not disclosed; placed Q4)"
+   },
+   {
+    "p": "2026Q1",
+    "v": 536,
+    "src": "R"
+   },
+   {
+    "p": "2026Q2",
+    "v": 695,
+    "src": "R"
+   }
+  ],
+  "shares_m": {
+   "2016": 339.0,
+   "2017": 340.2,
+   "2018": 343.7,
+   "2019": 358.2,
+   "2020": 358.5,
+   "2021": 358.9,
+   "2022": 359.2,
+   "2023": 359.5,
+   "2024": 359.9,
+   "2025": 360.3,
+   "2026": 357.5
+  },
+  "shares_src": "filings diluted avg; 2025-26 E"
+ },
+ "price": [
+  {
+   "d": "2016-12-31",
+   "px": 115.3,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2017-12-31",
+   "px": 146.1,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2018-12-31",
+   "px": 188.1,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2019-12-31",
+   "px": 200.7,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2020-12-31",
+   "px": 182.1,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2021-12-31",
+   "px": 228.5,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2022-12-31",
+   "px": 168.2,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2023-12-31",
+   "px": 210.6,
+   "src": "E year-end actual [verify; BDH export = 1-click quarterly upgrade]"
+  },
+  {
+   "d": "2024-12-31",
+   "px": 232.0,
+   "src": "E ~actual"
+  },
+  {
+   "d": "2025-12-31",
+   "px": 268.0,
+   "src": "E approx"
+  },
+  {
+   "d": "2026-03-31",
+   "px": 305.0,
+   "src": "E approx"
+  },
+  {
+   "d": "2026-06-30",
+   "px": 247.0,
+   "src": "E approx"
+  },
+  {
+   "d": "2026-07-24",
+   "px": 242.26,
+   "src": "R-aggregator post-Q2"
+  }
+ ],
+ "tripwires": [
+  {
+   "k": "FMX share of SOFR complex",
+   "reading": "~0.1-0.2% (E)",
+   "threshold": ">2% two qtrs / UST OI >100k",
+   "src": "BGC quarterly",
+   "checked": "2026-07-17",
+   "status": "green"
+  },
+  {
+   "k": "RPC ex-mix residual",
+   "reading": "POSITIVE in Q2'26",
+   "threshold": "<-2%/yr three qtrs",
+   "src": "auto from by-line",
+   "checked": "2026-07-27",
+   "status": "green"
+  },
+  {
+   "k": "Rates ADV vs issuance",
+   "reading": "no divergence",
+   "threshold": "4 qtrs down y/y w/ issuance up",
+   "src": "CME x Treasury",
+   "checked": "2026-07-27",
+   "status": "green"
+  },
+  {
+   "k": "CFTC open access / interop",
+   "reading": "nothing filed; regime watch",
+   "threshold": "any concept release/ANPR",
+   "src": "Federal Register alerts",
+   "checked": "2026-07-27",
+   "status": "amber"
+  },
+  {
+   "k": "Rival OI in core class",
+   "reading": "rounding error",
+   "threshold": ">5% of CME's",
+   "src": "venue disclosures",
+   "checked": "2026-07-17",
+   "status": "green"
+  },
+  {
+   "k": "Capital-allocation tells",
+   "reading": "buyback price-sensitive (H1 $1.23B)",
+   "threshold": "off-thesis deal / Feb-27 decision",
+   "src": "company",
+   "checked": "2026-07-27",
+   "status": "green"
+  }
+ ],
+ "amort_annual": {
+  "2016": 96,
+  "2017": 96,
+  "2018": 130,
+  "2019": 315,
+  "2020": 311,
+  "2021": 238,
+  "2022": 228,
+  "2023": 227,
+  "2024": 222,
+  "2025": 223.4,
+  "2026": 220
+ },
+ "amort_src": "purchased-intangible amortization, annual (marketbeat/10-Ks); /4 for quarterly approx"
+}
