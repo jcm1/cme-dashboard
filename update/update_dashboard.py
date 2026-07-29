@@ -7,8 +7,8 @@ Commands:
   add-month  --period 2026-07 --adv-total 30.1 [--adv rates=15.0,equity=8.1,...] [--oi rates=xx,...]
   add-quarter --period 2026Q3 --rev 1680 [--adj-opex 525] [--blend 0.67] [--rpc rates=0.46,...]
              [--buybacks 400] [--savings 97] [--perf-bonds 168] [--price 2026-09-30=255]
-             [--fees 1390 --md 240] [--adj-eps 3.05] [--oi rates=84.3,equity=10.2,...]  (P8-P12 series)
-             [--opex comp=233,tech=83,prof=29,amort=56,depr=28,other=60]  (P13; needs --opex-g,
+             [--fees 1390 --md 240] [--adj-eps 3.05] [--oi rates=84.3,equity=10.2,...]  (feeds P3/P4/P7/P12)
+             [--opex comp=233,tech=83,prof=29,amort=56,depr=28,other=60]  (P6; needs --opex-g,
               licensing & other fees stored as exact residual = opex_g - the six lines)
   set --path capital.reg_div_ps.2027 --value 5.6     surgical edit
 Every mutation appends to data/audit_log.jsonl with timestamp + args. Run rebuild after edits.
