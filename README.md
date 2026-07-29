@@ -13,4 +13,4 @@ Three layers, best available wins: embedded last quarterly close → `data/price
 Or in Claude: "update the CME dashboard with the July volume release" — I fetch, validate, run the command, hand back the folder. Cowork scheduled-task text: *"On the 2nd business day monthly: fetch CME's volume release, update cme-dashboard via update_dashboard.py, show me the diff before committing."*
 
 ## Quarterly ritual (earnings day + 10-Q)
-`add-quarter --period 2026Q3 --rev ... --adj-opex ... --blend ... --rpc ... --buybacks ... --savings ... --perf-bonds ... --price 2026-09-30=...` → push. Tripwire chips update via `set --path tripwires...`.
+`add-quarter --period 2026Q3 --rev ... --adj-opex ... --blend ... --rpc ... --buybacks ... --savings ... --perf-bonds ... --opex comp=..,tech=..,prof=..,amort=..,depr=..,other=.. --price 2026-09-30=...` → push. Tripwire chips update via `set --path tripwires...`. (`--opex` feeds P13; licensing & other fees is stored as the exact residual vs `--opex-g`.)

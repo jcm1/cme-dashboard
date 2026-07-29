@@ -1449,19 +1449,214 @@
   ],
   "perf_bonds_b": [
    {
+    "p": "2016Q1",
+    "v": 37.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2016Q2",
+    "v": 36.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2016Q3",
+    "v": 31.6,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2016Q4",
+    "v": 37.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2017Q1",
+    "v": 44.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2017Q2",
+    "v": 47.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2017Q3",
+    "v": 46.9,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2017Q4",
+    "v": 44.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2018Q1",
+    "v": 39.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2018Q2",
+    "v": 36.9,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2018Q3",
+    "v": 37.8,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2018Q4",
+    "v": 39.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2019Q1",
+    "v": 33.6,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2019Q2",
+    "v": 32.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2019Q3",
+    "v": 41.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2019Q4",
+    "v": 37.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2020Q1",
+    "v": 100.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2020Q2",
+    "v": 79.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2020Q3",
+    "v": 88.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2020Q4",
+    "v": 86.8,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2021Q1",
+    "v": 123.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2021Q2",
+    "v": 141.3,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2021Q3",
+    "v": 149.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2021Q4",
+    "v": 157.9,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2022Q1",
+    "v": 167.7,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2022Q2",
+    "v": 138.4,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2022Q3",
+    "v": 140.0,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2022Q4",
+    "v": 135.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2023Q1",
+    "v": 128.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2023Q2",
+    "v": 113.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2023Q3",
+    "v": 87.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
     "p": "2023Q4",
-    "v": 90,
-    "src": "E approx"
+    "v": 90.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2024Q1",
+    "v": 94.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2024Q2",
+    "v": 85.7,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2024Q3",
+    "v": 99.5,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2024Q4",
+    "v": 98.9,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2025Q1",
+    "v": 120.7,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2025Q2",
+    "v": 142.2,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2025Q3",
+    "v": 149.0,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
    },
    {
     "p": "2025Q4",
     "v": 159.7,
-    "src": "R"
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
    },
    {
     "p": "2026Q1",
     "v": 165.0,
-    "src": "R"
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
+   },
+   {
+    "p": "2026Q2",
+    "v": 158.1,
+    "src": "R 10-Q/10-K XBRL (GoodFaithAndMarginDepositsWithBrokerDealers)"
    }
   ],
   "oi_by_class": {
@@ -1600,7 +1795,8 @@
      "src": "R volume releases (verified)"
     }
    ]
-  }
+  },
+  "perf_bonds_src": "quarter-end cash performance bonds & guaranty fund contributions (B/S), EDGAR XBRL, all R"
  },
  "capital": {
   "reg_div_ps": {
@@ -2749,5 +2945,474 @@
    "v": 2.99,
    "src": "R release non-GAAP recon (verified)"
   }
- ]
+ ],
+ "opex_breakdown": {
+  "note": "GAAP income-statement expense lines, $M, EDGAR XBRL R. lic = residual (total - tagged lines): licensing & other fee agreements exactly for 2019Q1->, plus occupancy/communication pre-2019 (D, arithmetically exact). depr Q4s derived FY - 9moYTD (D from R).",
+  "series": [
+   {
+    "p": "2016Q1",
+    "comp": 131.9,
+    "tech": 17.4,
+    "prof": 31.7,
+    "amort": 24.0,
+    "depr": 33.9,
+    "lic": 67.0,
+    "other": 54.4,
+    "total": 360.3
+   },
+   {
+    "p": "2016Q2",
+    "comp": 131.7,
+    "tech": 17.7,
+    "prof": 39.0,
+    "amort": 24.0,
+    "depr": 30.4,
+    "lic": 63.5,
+    "other": 36.8,
+    "total": 343.1
+   },
+   {
+    "p": "2016Q3",
+    "comp": 130.6,
+    "tech": 17.3,
+    "prof": 33.5,
+    "amort": 24.0,
+    "depr": 31.2,
+    "lic": 58.0,
+    "other": 21.8,
+    "total": 316.4
+   },
+   {
+    "p": "2016Q4",
+    "comp": 149.0,
+    "tech": 45.2,
+    "prof": 40.2,
+    "amort": 24.1,
+    "depr": 33.7,
+    "lic": 82.7,
+    "other": 0.0,
+    "total": 374.9,
+    "flag": "lic-includes-other (FY presentation drift)"
+   },
+   {
+    "p": "2017Q1",
+    "comp": 142.6,
+    "tech": 18.7,
+    "prof": 28.6,
+    "amort": 24.0,
+    "depr": 29.4,
+    "lic": 60.2,
+    "other": 24.9,
+    "total": 328.4
+   },
+   {
+    "p": "2017Q2",
+    "comp": 139.7,
+    "tech": 18.2,
+    "prof": 28.6,
+    "amort": 24.0,
+    "depr": 28.8,
+    "lic": 58.1,
+    "other": 22.0,
+    "total": 319.4
+   },
+   {
+    "p": "2017Q3",
+    "comp": 141.7,
+    "tech": 19.3,
+    "prof": 25.8,
+    "amort": 23.8,
+    "depr": 26.9,
+    "lic": 67.4,
+    "other": 18.3,
+    "total": 323.2
+   },
+   {
+    "p": "2017Q4",
+    "comp": 139.9,
+    "tech": 45.4,
+    "prof": 34.6,
+    "amort": 23.7,
+    "depr": 27.9,
+    "lic": 91.6,
+    "other": 0.0,
+    "total": 363.1,
+    "flag": "lic-includes-other (FY presentation drift)"
+   },
+   {
+    "p": "2018Q1",
+    "comp": 152.7,
+    "tech": 25.5,
+    "prof": 42.6,
+    "amort": 23.7,
+    "depr": 28.1,
+    "lic": 49.5,
+    "other": 46.0,
+    "total": 368.1
+   },
+   {
+    "p": "2018Q2",
+    "comp": 150.8,
+    "tech": 25.2,
+    "prof": 31.9,
+    "amort": 23.6,
+    "depr": 27.5,
+    "lic": 39.9,
+    "other": 93.8,
+    "total": 392.7
+   },
+   {
+    "p": "2018Q3",
+    "comp": 144.9,
+    "tech": 24.7,
+    "prof": 31.3,
+    "amort": 23.7,
+    "depr": 30.2,
+    "lic": 33.4,
+    "other": 66.1,
+    "total": 354.3
+   },
+   {
+    "p": "2018Q4",
+    "comp": 223.8,
+    "tech": 41.8,
+    "prof": 60.3,
+    "amort": 59.0,
+    "depr": 32.9,
+    "lic": 47.8,
+    "other": 121.1,
+    "total": 586.7
+   },
+   {
+    "p": "2019Q1",
+    "comp": 230.3,
+    "tech": 47.1,
+    "prof": 39.4,
+    "amort": 80.7,
+    "depr": 32.9,
+    "lic": 40.5,
+    "other": 77.7,
+    "total": 548.6
+   },
+   {
+    "p": "2019Q2",
+    "comp": 227.3,
+    "tech": 48.6,
+    "prof": 41.7,
+    "amort": 76.1,
+    "depr": 46.3,
+    "lic": 44.8,
+    "other": 89.3,
+    "total": 574.1
+   },
+   {
+    "p": "2019Q3",
+    "comp": 223.5,
+    "tech": 52.7,
+    "prof": 43.2,
+    "amort": 79.8,
+    "depr": 41.4,
+    "lic": 45.6,
+    "other": 105.9,
+    "total": 592.1
+   },
+   {
+    "p": "2019Q4",
+    "comp": 217.6,
+    "tech": 53.1,
+    "prof": 49.8,
+    "amort": 78.1,
+    "depr": 38.0,
+    "lic": 41.3,
+    "other": 87.5,
+    "total": 565.4
+   },
+   {
+    "p": "2020Q1",
+    "comp": 207.5,
+    "tech": 47.7,
+    "prof": 41.7,
+    "amort": 77.3,
+    "depr": 35.3,
+    "lic": 73.9,
+    "other": 78.8,
+    "total": 562.2
+   },
+   {
+    "p": "2020Q2",
+    "comp": 217.0,
+    "tech": 49.1,
+    "prof": 51.2,
+    "amort": 76.6,
+    "depr": 36.7,
+    "lic": 55.4,
+    "other": 58.8,
+    "total": 544.8
+   },
+   {
+    "p": "2020Q3",
+    "comp": 216.4,
+    "tech": 48.1,
+    "prof": 48.4,
+    "amort": 78.3,
+    "depr": 39.7,
+    "lic": 57.7,
+    "other": 67.1,
+    "total": 555.7
+   },
+   {
+    "p": "2020Q4",
+    "comp": 215.6,
+    "tech": 53.6,
+    "prof": 50.0,
+    "amort": 79.0,
+    "depr": 41.5,
+    "lic": 57.9,
+    "other": 85.9,
+    "total": 583.5
+   },
+   {
+    "p": "2021Q1",
+    "comp": 225.0,
+    "tech": 48.2,
+    "prof": 37.4,
+    "amort": 60.6,
+    "depr": 37.6,
+    "lic": 64.7,
+    "other": 54.7,
+    "total": 528.2
+   },
+   {
+    "p": "2021Q2",
+    "comp": 211.7,
+    "tech": 49.3,
+    "prof": 36.8,
+    "amort": 59.4,
+    "depr": 37.1,
+    "lic": 54.2,
+    "other": 56.0,
+    "total": 504.5
+   },
+   {
+    "p": "2021Q3",
+    "comp": 198.6,
+    "tech": 49.3,
+    "prof": 45.2,
+    "amort": 59.0,
+    "depr": 37.2,
+    "lic": 57.6,
+    "other": 49.3,
+    "total": 496.2
+   },
+   {
+    "p": "2021Q4",
+    "comp": 201.7,
+    "tech": 45.8,
+    "prof": 32.3,
+    "amort": 58.6,
+    "depr": 35.9,
+    "lic": 60.4,
+    "other": 80.9,
+    "total": 515.6
+   },
+   {
+    "p": "2022Q1",
+    "comp": 185.2,
+    "tech": 45.9,
+    "prof": 31.8,
+    "amort": 58.4,
+    "depr": 33.5,
+    "lic": 80.9,
+    "other": 51.8,
+    "total": 487.5
+   },
+   {
+    "p": "2022Q2",
+    "comp": 185.3,
+    "tech": 45.9,
+    "prof": 32.0,
+    "amort": 57.1,
+    "depr": 33.0,
+    "lic": 83.1,
+    "other": 51.1,
+    "total": 487.5
+   },
+   {
+    "p": "2022Q3",
+    "comp": 189.6,
+    "tech": 46.8,
+    "prof": 35.1,
+    "amort": 55.5,
+    "depr": 34.5,
+    "lic": 83.6,
+    "other": 43.9,
+    "total": 489.0
+   },
+   {
+    "p": "2022Q4",
+    "comp": 193.0,
+    "tech": 50.0,
+    "prof": 38.5,
+    "amort": 56.7,
+    "depr": 33.9,
+    "lic": 72.4,
+    "other": 95.0,
+    "total": 539.5
+   },
+   {
+    "p": "2023Q1",
+    "comp": 204.5,
+    "tech": 51.3,
+    "prof": 38.3,
+    "amort": 56.8,
+    "depr": 31.9,
+    "lic": 84.7,
+    "other": 60.4,
+    "total": 527.9
+   },
+   {
+    "p": "2023Q2",
+    "comp": 205.7,
+    "tech": 53.3,
+    "prof": 37.8,
+    "amort": 57.0,
+    "depr": 32.3,
+    "lic": 78.2,
+    "other": 57.3,
+    "total": 521.6
+   },
+   {
+    "p": "2023Q3",
+    "comp": 205.5,
+    "tech": 55.6,
+    "prof": 32.2,
+    "amort": 57.2,
+    "depr": 31.1,
+    "lic": 79.5,
+    "other": 56.5,
+    "total": 517.6
+   },
+   {
+    "p": "2023Q4",
+    "comp": 212.9,
+    "tech": 58.5,
+    "prof": 36.1,
+    "amort": 55.6,
+    "depr": 30.7,
+    "lic": 80.4,
+    "other": 101.9,
+    "total": 576.1
+   },
+   {
+    "p": "2024Q1",
+    "comp": 206.0,
+    "tech": 59.4,
+    "prof": 33.1,
+    "amort": 55.2,
+    "depr": 30.1,
+    "lic": 87.9,
+    "other": 56.6,
+    "total": 528.3
+   },
+   {
+    "p": "2024Q2",
+    "comp": 204.7,
+    "tech": 64.1,
+    "prof": 34.7,
+    "amort": 55.5,
+    "depr": 28.7,
+    "lic": 85.9,
+    "other": 58.3,
+    "total": 531.9
+   },
+   {
+    "p": "2024Q3",
+    "comp": 218.8,
+    "tech": 66.6,
+    "prof": 31.0,
+    "amort": 55.7,
+    "depr": 28.2,
+    "lic": 97.6,
+    "other": 62.3,
+    "total": 560.2
+   },
+   {
+    "p": "2024Q4",
+    "comp": 220.8,
+    "tech": 65.7,
+    "prof": 33.9,
+    "amort": 55.3,
+    "depr": 28.1,
+    "lic": 84.0,
+    "other": 90.4,
+    "total": 578.2
+   },
+   {
+    "p": "2025Q1",
+    "comp": 206.7,
+    "tech": 65.7,
+    "prof": 28.5,
+    "amort": 55.2,
+    "depr": 27.3,
+    "lic": 96.6,
+    "other": 54.3,
+    "total": 534.3
+   },
+   {
+    "p": "2025Q2",
+    "comp": 221.6,
+    "tech": 70.9,
+    "prof": 37.4,
+    "amort": 56.1,
+    "depr": 27.3,
+    "lic": 96.2,
+    "other": 53.2,
+    "total": 562.7
+   },
+   {
+    "p": "2025Q3",
+    "comp": 237.6,
+    "tech": 71.4,
+    "prof": 36.7,
+    "amort": 56.2,
+    "depr": 26.4,
+    "lic": 81.6,
+    "other": 55.1,
+    "total": 565.0
+   },
+   {
+    "p": "2025Q4",
+    "comp": 241.1,
+    "tech": 75.2,
+    "prof": 47.9,
+    "amort": 55.9,
+    "depr": 26.5,
+    "lic": 96.6,
+    "other": 85.9,
+    "total": 629.1
+   },
+   {
+    "p": "2026Q1",
+    "comp": 223.0,
+    "tech": 76.6,
+    "prof": 28.2,
+    "amort": 56.1,
+    "depr": 27.2,
+    "lic": 106.8,
+    "other": 52.5,
+    "total": 570.4
+   },
+   {
+    "p": "2026Q2",
+    "comp": 233.5,
+    "tech": 83.3,
+    "prof": 29.1,
+    "amort": 56.0,
+    "depr": 28.2,
+    "lic": 109.1,
+    "other": 59.9,
+    "total": 599.1
+   }
+  ]
+ }
 }
