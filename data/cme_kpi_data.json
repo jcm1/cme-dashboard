@@ -2,11 +2,11 @@
  "meta": {
   "built": "2026-07-27",
   "through": {
-   "monthly": "2026-06",
+   "monthly": "2026-08",
    "quarterly": "2026Q2"
   },
   "next_updates": {
-   "volume_release": "~2026-08-04",
+   "volume_release": "~2026-10-02",
    "q3_earnings": "~2026-10-22",
    "q2_10q": "~2026-08-06"
   }
@@ -400,6 +400,16 @@
    "p": "2026Q2",
    "adv": 29.843,
    "src": "R (IR backfill verified)"
+  },
+  {
+   "p": "2026-07",
+   "adv": 27.0,
+   "src": "monthly volume release R"
+  },
+  {
+   "p": "2026-08",
+   "adv": 29.7,
+   "src": "monthly volume release R"
   }
  ],
  "byline": {
